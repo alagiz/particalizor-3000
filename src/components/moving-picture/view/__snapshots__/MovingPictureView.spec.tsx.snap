@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given MovingPictureView when rendering should have MovingPictureView matching snapshot 1`] = `
+<Fragment>
+  <styled.div>
+    <canvas
+      className="dest-canvas"
+    />
+  </styled.div>
+  <styled.div>
+    <canvas
+      id="referenceCanvas"
+    />
+  </styled.div>
+</Fragment>
+`;
