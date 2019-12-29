@@ -5,6 +5,12 @@ react library capable of particalizing images
 [![Build Status](https://travis-ci.org/ArtemAlagizov/particalizor-3000.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/particalizor-3000)
 [![License Badge][license badge]][LICENSE]
 
+# installation
+
+```
+npm i particalizor-3000 --save
+```
+
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
 |![testImage](/src/assets/testImage.png)|![particalizedImage](https://github.com/ArtemAlagizov/images-for-repos/blob/master/particalizor-image-particalized.gif)|
@@ -43,7 +49,9 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 | hueChannel        |string|no | "blue"  | "red","green"<br>,"blue","hue",<br>"saturation","light" | enum of {"red","green","blue",<br>"hue","saturation","light"}|
 | reverseDirection  |boolean|no| false   | true,false | reverse direction                                |
 | reverseHue        |boolean|no| false   | true,false | reverse hue                                      |
-| randomizeSettings |boolean|no| false   | true,false | randomize properties that are not passed in      |
+| randomizeSettings*|boolean|no| false   | true,false | randomize properties that are not passed in      |
+
+\* not available yet
 
 **property value falls back to default if provided proprety value is not acceptable**  
   
