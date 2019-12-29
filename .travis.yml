@@ -6,6 +6,8 @@ cache:
     - node_modules
 script:
   - yarn install &&
-  - yarn lint &&
-  - yarn test &&
-  - yarn build
+    yarn lint &&
+    yarn test &&
+    yarn build
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
