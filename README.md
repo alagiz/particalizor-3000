@@ -7,7 +7,7 @@ react library capable of particalizing images
 
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
-|![testImage](/src/testImage.png)|![particalizedImage](https://github.com/ArtemAlagizov/images-for-repos/blob/master/particalizor-image-particalized.gif)|
+|![testImage](/src/assets/testImage.png)|![particalizedImage](https://github.com/ArtemAlagizov/images-for-repos/blob/master/particalizor-image-particalized.gif)|
 
 **settings used to create the example image above**
 ```tsx

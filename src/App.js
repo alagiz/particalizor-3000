@@ -1,6 +1,6 @@
 import React from "react";
 import MovingPicture from "./components/moving-picture/container/MovingPicture";
-import testImage from "./testImage.png";
+import testImage from "./assets/testImage.png";
 
 function App() {
   return (
