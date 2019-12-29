@@ -7,8 +7,6 @@ describe("Given MovingPictureView", () => {
     it("should have MovingPictureView matching snapshot", () => {
       const component = shallow(
         <MovingPictureView
-          imageHeight={0}
-          imageWidth={0}
           referenceCanvasRef={null}
           destinationCanvasRef={null}
         />
