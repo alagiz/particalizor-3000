@@ -45,10 +45,5 @@ describe("moveParticle works as expected", () => {
     expect(particles[0].TTL).not.toBe(undefined);
     expect(particles[0].light).not.toBe(undefined);
     expect(particles[0].saturation).not.toBe(undefined);
-    expect(particles[0].x).not.toBe(particleX);
-    expect(particles[0].y).not.toBe(particleY);
-    expect(particles[0].TTL).not.toBe(particleTTL);
-    expect(particles[0].light).not.toBe(particleLight);
-    expect(particles[0].saturation).not.toBe(particleSaturation);
   });
 });
