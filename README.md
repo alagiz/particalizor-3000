@@ -3,6 +3,7 @@
 react library capable of particalizing images
 
 [![Build Status](https://travis-ci.org/alagiz/particalizor-3000.svg?branch=master)](https://travis-ci.org/alagiz/particalizor-3000)
+[![Coverage Status](https://img.shields.io/coveralls/github/alagiz/particalizor-3000.svg)](https://coveralls.io/github/alagiz/particalizor-3000?branch=master)
 [![License Badge][license badge]][LICENSE]
 
 # installation
