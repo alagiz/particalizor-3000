@@ -19,6 +19,7 @@
     "test": "react-scripts test --coverage --watchAll=false",
     "test-ci": "CI=true TZ='Europe/Amsterdam' react-scripts test",
     "coverage": "react-scripts test --coverage --watchAll=false",
+    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "lint": "eslint src/**/*.{js,ts,tsx} --fix",
     "stylelint": "stylelint src/**/Styled/**",
     "prepare": "npm run build"
