@@ -9,7 +9,22 @@ import { IActualParticalizorPropertyValues } from "../provided-values-handler/Pr
 import { isNil, range } from "ramda";
 import { rgbToHsl } from "../color-utils/ColorUtils";
 
-export const moveParticle: (
+const drawOnCanvas = (
+  particle: IParticle,
+  previousPosition: { x: any; y: any },
+  hueNumber: number,
+  destination2dContext: CanvasRenderingContext2D | null
+) => {
+  if (!isNil(destination2dContext)) {
+    destination2dContext.beginPath();
+    destination2dContext.moveTo(previousPosition.x, previousPosition.y);
+    destination2dContext.lineTo(particle.x, particle.y);
+    destination2dContext.strokeStyle = `hsl(${hueNumber},${particle.saturation},${particle.light})`;
+    destination2dContext.stroke();
+  }
+};
+
+export const moveParticles: (
   particles: IParticle[],
   srcData: Uint8ClampedArray,
   actualValues: IActualParticalizorPropertyValues,
@@ -97,19 +112,4 @@ export const moveParticle: (
       drawOnCanvas(particle, previousPosition, hueNumber, destination2dContext);
     }
   });
-};
-
-const drawOnCanvas = (
-  particle: IParticle,
-  previousPosition: { x: any; y: any },
-  hueNumber: number,
-  destination2dContext: CanvasRenderingContext2D | null
-) => {
-  if (!isNil(destination2dContext)) {
-    destination2dContext.beginPath();
-    destination2dContext.moveTo(previousPosition.x, previousPosition.y);
-    destination2dContext.lineTo(particle.x, particle.y);
-    destination2dContext.strokeStyle = `hsl(${hueNumber},${particle.saturation},${particle.light})`;
-    destination2dContext.stroke();
-  }
 };

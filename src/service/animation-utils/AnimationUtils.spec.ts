@@ -1,4 +1,4 @@
-import { moveParticle } from "./AnimationUtils";
+import { moveParticles } from "./AnimationUtils";
 import {
   createParticles,
   direction
@@ -32,7 +32,13 @@ describe("moveParticle works as expected", () => {
       .createElement("canvas")
       .getContext("2d");
 
-    moveParticle(particles, srcData, actualValues, destination2dContext, image);
+    moveParticles(
+      particles,
+      srcData,
+      actualValues,
+      destination2dContext,
+      image
+    );
 
     expect(particles[0].x).not.toBe(undefined);
     expect(particles[0].y).not.toBe(undefined);
