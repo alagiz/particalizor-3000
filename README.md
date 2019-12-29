@@ -40,7 +40,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 # api
 
 | property          |type|required|default|acceptable values|description                                                                            |
-| :---------------: |:----:|:-:|:-------:|:-------:|:--------------------------------------------------------------------------:|
+| ----------------- |------|---|---------|--------|--------------------------------------------------------------------------|
 | imageSource       |string|yes| --      | valid image source|  source of the image,<br>either imported image (.png, .jpg),<br>either base64 representation (i.e.  "data:image/jpeg;base64,/9j/4A..") |
 | particleNumber    |number|no | 7000    |  > 0 | number of particles                                    |
 | particleTraceWidth|number|no | 1       |  > 0|width of a particle trace, essentially [canvas lineWidth](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth)                    |
