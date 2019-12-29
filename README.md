@@ -14,7 +14,7 @@ npm i particalizor-3000 --save
 
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
-|![testImage](/src/assets/testImage.png)|![particalizedImage](https://github.com/ArtemAlagizov/images-for-repos/raw/master/particalizor-image-particalized.gif)|
+|![testImage](/src/assets/testImage.png)|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-image-particalized.gif)|
 
 **settings used to create the example image above**
 ```tsx
