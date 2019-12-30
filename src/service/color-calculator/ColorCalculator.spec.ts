@@ -1,4 +1,8 @@
-import { rgbToHsl } from "./ColorUtils";
+import {
+  getRandomIntNumberInRange,
+  getRandomNumberInRange,
+  rgbToHsl
+} from "./ColorCalculator";
 
 describe("Returns correct hsl value when passed rgb values", () => {
   it("returns [0,0,0] for input of [0,0,0]", () => {
@@ -55,5 +59,28 @@ describe("Returns correct hsl value when passed rgb values", () => {
     expect(hue).toBe(2 / 3);
     expect(saturation).toBe(1);
     expect(light).toBe(1 / 2);
+  });
+});
+
+describe("getRandomNumberInRange works as expected", () => {
+  it("returns random number large or equal than provided min and less or equal than provided max", () => {
+    const min = 0;
+    const max = 12;
+
+    const randomNumberInRange = getRandomNumberInRange(min, max);
+
+    expect(randomNumberInRange).toBeLessThanOrEqual(max);
+    expect(randomNumberInRange).toBeGreaterThanOrEqual(min);
+  });
+});
+
+describe("getRandomIntNumberInRange works as expected", () => {
+  it("returns random int number large or equal than provided min and less or equal than provided max", () => {
+    const min = 0;
+    const max = 12;
+
+    const randomNumberInRange = getRandomIntNumberInRange(min, max);
+
+    expect(randomNumberInRange).toBe(Math.floor(randomNumberInRange));
   });
 });

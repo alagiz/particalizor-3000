@@ -1,4 +1,4 @@
-import { createNewImage } from "./ImageUtils";
+import { createNewImage } from "./Painter";
 
 describe("createNewImage works as expected", () => {
   it("creates new image", () => {

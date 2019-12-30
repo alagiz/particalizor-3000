@@ -1,13 +1,12 @@
+import { createParticle, IParticle } from "../particle-creator/ParticleCreator";
+import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
+import { isNil, range } from "ramda";
 import {
-  createParticle,
   direction,
   directionMap,
-  hueMap,
-  IParticle
-} from "../particalizor-utils/ParticalizorUtils";
-import { IActualParticalizorPropertyValues } from "../provided-values-handler/ProvidedValuesHandler";
-import { isNil, range } from "ramda";
-import { rgbToHsl } from "../color-utils/ColorUtils";
+  hueMap
+} from "../direction-calculator/DirectionCalculator";
+import { rgbToHsl } from "../color-calculator/ColorCalculator";
 
 const drawOnCanvas = (
   particle: IParticle,
