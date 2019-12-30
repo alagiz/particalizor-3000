@@ -1,7 +1,7 @@
 import { isNil } from "ramda";
-import { createParticles } from "../particalizor-utils/ParticalizorUtils";
-import { moveParticles } from "../animation-utils/AnimationUtils";
-import { IActualParticalizorPropertyValues } from "../provided-values-handler/ProvidedValuesHandler";
+import { createParticles } from "../particle-creator/ParticleCreator";
+import { moveParticles } from "../animator/Animator";
+import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
 import errorImage from "../../assets/onErrorImage.png";
 
 export const drawImageOnCanvas = (

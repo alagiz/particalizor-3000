@@ -1,9 +1,7 @@
-import { moveParticles } from "./AnimationUtils";
-import {
-  createParticles,
-  direction
-} from "../particalizor-utils/ParticalizorUtils";
-import { IActualParticalizorPropertyValues } from "../provided-values-handler/ProvidedValuesHandler";
+import { moveParticles } from "./Animator";
+import { createParticles } from "../particle-creator/ParticleCreator";
+import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
+import { direction } from "../direction-calculator/DirectionCalculator";
 
 describe("moveParticle works as expected", () => {
   it("changes a particle properties", () => {
@@ -21,11 +19,6 @@ describe("moveParticle works as expected", () => {
 
     particles[0].TTL = -1;
 
-    const particleX = particles[0].x;
-    const particleY = particles[0].y;
-    const particleTTL = particles[0].TTL;
-    const particleLight = particles[0].light;
-    const particleSaturation = particles[0].saturation;
     const srcData: Uint8ClampedArray = new Uint8ClampedArray([17, -45.3]);
     const image = new Image();
     const destination2dContext = document

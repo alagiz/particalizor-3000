@@ -1,9 +1,10 @@
-import { getActualValues, getReasonableValue } from "./ProvidedValuesHandler";
 import {
   defaultParticalizorValues,
-  direction,
+  getActualValues,
+  getReasonableValue,
   particalizorSettingNames
-} from "../particalizor-utils/ParticalizorUtils";
+} from "./PropertiesHandler";
+import { direction } from "../direction-calculator/DirectionCalculator";
 
 describe("getReasonableValue works as expected", () => {
   it("returns default for particleNumber if provided value is not more than 0", () => {

@@ -1,9 +1,5 @@
-import {
-  defaultParticalizorValues,
-  direction,
-  particalizorSettingNames
-} from "../particalizor-utils/ParticalizorUtils";
 import { isNil } from "ramda";
+import { direction } from "../direction-calculator/DirectionCalculator";
 
 export interface IActualParticalizorPropertyValues {
   actualParticleNumber: number;
@@ -15,6 +11,39 @@ export interface IActualParticalizorPropertyValues {
   actualReverseHue: boolean;
   actualParticleTraceWidth: number;
 }
+
+export interface IParticalizorSettingNames {
+  particleLifeTime: number;
+  particleVelocity: number;
+  directionChannel: direction;
+  directionReverse: boolean;
+  hueChannel: direction;
+  hueReverse: boolean;
+  particleTraceWidth: number;
+  particleNumber: number;
+}
+
+export enum particalizorSettingNames {
+  particleLifeTime = "particleLifeTime",
+  particleVelocity = "particleVelocity",
+  directionChannel = "directionChannel",
+  directionReverse = "directionReverse",
+  hueChannel = "hueChannel",
+  hueReverse = "hueReverse",
+  particleTraceWidth = "particleTraceWidth",
+  particleNumber = "particleNumber"
+}
+
+export const defaultParticalizorValues: IParticalizorSettingNames = {
+  particleLifeTime: 700,
+  particleVelocity: 1,
+  directionChannel: direction.hue,
+  directionReverse: false,
+  hueChannel: direction.blue,
+  hueReverse: false,
+  particleTraceWidth: 1,
+  particleNumber: 7000
+};
 
 export const isProvidedValueReasonable = (
   settingName: particalizorSettingNames,
