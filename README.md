@@ -9,7 +9,7 @@ react library capable of particalizing images
 # installation
 
 ```
-npm i particalizor-3000 --save
+yarn add particalizor-3000
 ```
 
 |  original                      | particalized-3000                      | 
