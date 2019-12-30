@@ -41,3 +41,8 @@ export const rgbToHsl = (red: number, green: number, blue: number) => {
 
   return [hue, saturation, light];
 };
+
+export const getRandomNumberInRange = (min: number, max: number) =>
+  min + (max - min) * Math.random();
+export const getRandomIntNumberInRange = (min: number, max: number) =>
+  Math.floor(getRandomNumberInRange(min, max));
