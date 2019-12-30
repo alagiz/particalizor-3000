@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import MovingPictureView from "../view/MovingPictureView";
 import { IMovingPictureProps } from "./IMovingPictureProps";
-import { getActualValues } from "../../../service/provided-values-handler/ProvidedValuesHandler";
-import { createImageElement } from "../../../service/image-utils/ImageUtils";
+import { getActualValues } from "../../../service/properties-handler/PropertiesHandler";
+import { createImageElement } from "../../../service/painter/Painter";
 
 export const MovingPicture: React.FC<IMovingPictureProps> = ({
   particleNumber,
