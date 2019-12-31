@@ -1,4 +1,6 @@
+import { Ref } from "react";
+
 export interface IMovingPictureViewProps {
-  destinationCanvasRef: any;
-  referenceCanvasRef: any;
+  destinationCanvasRef: Ref<HTMLCanvasElement>;
+  referenceCanvasRef: Ref<HTMLCanvasElement>;
 }
