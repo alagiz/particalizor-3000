@@ -86,9 +86,9 @@ export const getActualValues: (
   particleNumber: number | null | undefined,
   particleLifeTime: number | null | undefined,
   particleVelocity: number | null | undefined,
-  directionChannel: "string" | null | undefined,
+  directionChannel: string | null | undefined,
   directionReverse: boolean | null | undefined,
-  hueChannel: "string" | null | undefined,
+  hueChannel: string | null | undefined,
   hueReverse: boolean | null | undefined,
   particleTraceWidth: number | null | undefined
 ) => IActualParticalizorPropertyValues = (
