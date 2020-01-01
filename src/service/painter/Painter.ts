@@ -65,8 +65,6 @@ export const drawImageOnCanvas = (
           actualParticleLifeTime
         );
 
-        console.log(requestID);
-
         cancelAllRequestAnimationFrames(requestID);
 
         const animate = () => {
