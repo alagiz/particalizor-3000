@@ -1,8 +1,18 @@
-import { isNil } from "ramda";
+import { isNil, range } from "ramda";
 import { createParticles } from "../particle-creator/ParticleCreator";
 import { moveParticles } from "../animator/Animator";
 import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
 import errorImage from "../../assets/onErrorImage.png";
+
+let requestID: number;
+
+const cancelAllRequestAnimationFrames = (requestId: number) => {
+  if (!isNil(requestId)) {
+    range(0, requestId).map(stackRequestId =>
+      window.cancelAnimationFrame(stackRequestId)
+    );
+  }
+};
 
 export const drawImageOnCanvas = (
   image: HTMLImageElement,
@@ -55,6 +65,10 @@ export const drawImageOnCanvas = (
           actualParticleLifeTime
         );
 
+        console.log(requestID);
+
+        cancelAllRequestAnimationFrames(requestID);
+
         const animate = () => {
           moveParticles(
             particles,
@@ -64,7 +78,7 @@ export const drawImageOnCanvas = (
             image
           );
 
-          window.requestAnimationFrame(animate);
+          requestID = window.requestAnimationFrame(animate);
         };
 
         animate();
