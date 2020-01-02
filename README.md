@@ -7,12 +7,12 @@ react library capable of particalizing images
 [![License Badge][license badge]][LICENSE]
 [![npm version](https://badge.fury.io/js/particalizor-3000.svg)](https://badge.fury.io/js/particalizor-3000)
 
-# live demo
+## live demo
 * predefined image for now
 * available here at the moment => http://3.13.45.208:8080/ 
 * github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
 
-# installation
+## installation
 
 ```
 yarn add particalizor-3000
@@ -43,7 +43,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 }
 ```
 
-# api
+## api
 
 | property          |type|required|default|acceptable values|description                                                                            |
 | ----------------- |------|---|---------|--------|--------------------------------------------------------------------------|
@@ -62,7 +62,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 
 **property value falls back to default if provided proprety value is not acceptable**  
   
-# example usage
+## example usage
 ```tsx
 import React from "react";
 import MovingPicture from "particalizor-3000";
@@ -76,7 +76,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
   );
 }
 ```
-# license
+## license
 
 [MIT License](LICENSE)
 
