@@ -21,6 +21,8 @@ export const drawImageOnCanvas = (
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues
 ) => {
+  cancelAllRequestAnimationFrames(requestID);
+
   if (
     !isNil(referenceCanvasRefCurrent) &&
     !isNil(destinationCanvasRefCurrent)
@@ -64,8 +66,6 @@ export const drawImageOnCanvas = (
           image.height,
           actualParticleLifeTime
         );
-
-        cancelAllRequestAnimationFrames(requestID);
 
         const animate = () => {
           moveParticles(
