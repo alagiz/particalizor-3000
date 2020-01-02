@@ -33,7 +33,7 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-object-literal-type-assertion": "off",
     "react/prop-types": "off",
-    "semi": ["error", "always"],
+    "semi": [2, "always"],
     "quotes": ["error", "double"]
   }
 }
