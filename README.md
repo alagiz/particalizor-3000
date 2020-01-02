@@ -5,6 +5,7 @@ react library capable of particalizing images
 [![Build Status](https://travis-ci.org/ArtemAlagizov/particalizor-3000.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/particalizor-3000)
 [![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg)](https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master)
 [![License Badge][license badge]][LICENSE]
+[![npm version](https://badge.fury.io/js/particalizor-3000.svg)](https://badge.fury.io/js/particalizor-3000)
 
 # live demo
 * predefined image for now
