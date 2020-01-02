@@ -4,8 +4,9 @@ react library capable of particalizing images
 
 [![Build Status](https://travis-ci.org/ArtemAlagizov/particalizor-3000.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/particalizor-3000)
 [![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg)](https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master)
-[![License Badge][license badge]][LICENSE]
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/383b4cf594f24390b55d3429019a7940)](https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ArtemAlagizov/particalizor-3000&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/particalizor-3000.svg)](https://badge.fury.io/js/particalizor-3000)
+[![License Badge][license badge]][LICENSE]
 
 ## live demo
 * predefined image for now
