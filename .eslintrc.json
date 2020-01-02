@@ -25,6 +25,8 @@
   "plugins": ["json", "react", "@typescript-eslint"],
   "rules": {
     "no-empty": ["error", { "allowEmptyCatch": true }],
+    "quotes": ["error", "double"],
+    "semi": "off",
     "@typescript-eslint/indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
@@ -33,8 +35,6 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-object-literal-type-assertion": "off",
     "@typescript-eslint/semi": ["error", "always"],
-    "react/prop-types": "off",
-    "semi": "off",
-    "quotes": ["error", "double"]
+    "react/prop-types": "off"
   }
 }
