@@ -66,7 +66,6 @@ describe("getActualValues works as expected", () => {
       particleNumber,
       particleLifeTime,
       particleVelocity,
-      // @ts-ignore
       directionChannel,
       directionReverse,
       hueChannel,
