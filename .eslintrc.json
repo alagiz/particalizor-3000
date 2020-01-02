@@ -35,7 +35,6 @@
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-object-literal-type-assertion": "off",
     "@typescript-eslint/semi": ["error"],
-    "@typescript-eslint/comma-dangle": ["error"],
     "@typescript-eslint/trailing-comma": "off",
     "react/prop-types": "off"
   }
