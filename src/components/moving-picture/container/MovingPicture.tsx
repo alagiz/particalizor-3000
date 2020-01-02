@@ -13,7 +13,6 @@ export const MovingPicture: React.FC<IMovingPictureProps> = ({
   hueChannel,
   reverseHue,
   particleTraceWidth,
-  randomizeSettings,
   imageSource
 }) => {
   const destinationCanvasRef = useRef<HTMLCanvasElement>(null);

@@ -7,6 +7,5 @@ export interface IMovingPictureProps {
   hueChannel?: string | null;
   reverseHue?: boolean | null;
   particleTraceWidth?: number | null;
-  randomizeSettings?: boolean | null;
   imageSource: string;
 }
