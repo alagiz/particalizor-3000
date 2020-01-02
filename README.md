@@ -6,6 +6,11 @@ react library capable of particalizing images
 [![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg)](https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master)
 [![License Badge][license badge]][LICENSE]
 
+# live demo
+* predefined image for now
+* available here at the moment => http://3.13.45.208:8080/ 
+* github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
+
 # installation
 
 ```
