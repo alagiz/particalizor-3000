@@ -86,7 +86,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 [BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-3000
 [build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-3000/master?style=flat-square
 [COVERAGE_URL]: https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master
-[coverage badge]: https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg?style=flat-square
+[coverage badge]: https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg?style=flat-square&color=brightgreen
 [QUALITY_URL]: https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000
 [quality badge]: https://img.shields.io/codacy/grade/383b4cf594f24390b55d3429019a7940?style=flat-square
 [NPM_VERSION_URL]: https://www.npmjs.com/package/particalizor-3000
