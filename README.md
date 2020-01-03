@@ -4,9 +4,16 @@ react library capable of particalizing images
 
 [![Build Status](https://travis-ci.org/ArtemAlagizov/particalizor-3000.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/particalizor-3000)
 [![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg)](https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/383b4cf594f24390b55d3429019a7940)](https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ArtemAlagizov/particalizor-3000&amp;utm_campaign=Badge_Grade)
+[![npm version](https://badge.fury.io/js/particalizor-3000.svg)](https://badge.fury.io/js/particalizor-3000)
 [![License Badge][license badge]][LICENSE]
 
-# installation
+## live demo
+* predefined image for now
+* available here at the moment => http://3.13.90.180:8080/
+* github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
+
+## installation
 
 ```
 yarn add particalizor-3000
@@ -37,7 +44,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 }
 ```
 
-# api
+## api
 
 | property          |type|required|default|acceptable values|description                                                                            |
 | ----------------- |------|---|---------|--------|--------------------------------------------------------------------------|
@@ -56,7 +63,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 
 **property value falls back to default if provided proprety value is not acceptable**  
   
-# example usage
+## example usage
 ```tsx
 import React from "react";
 import MovingPicture from "particalizor-3000";
@@ -70,7 +77,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
   );
 }
 ```
-# license
+## license
 
 [MIT License](LICENSE)
 
