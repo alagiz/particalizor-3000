@@ -3,8 +3,8 @@
 react library capable of particalizing images
 
 [![Build Status][build badge]][BUILD_URL]
-[![Codacy Quality Status][quality badge]][QUALITY_URL]
 [![Coverage Status][coverage badge]][COVERAGE_URL]
+[![Codacy Quality Status][quality badge]][QUALITY_URL]
 [![npm version][npm version badge]][NPM_VERSION_URL]
 [![License Badge][license badge]][LICENSE_URL]
 
