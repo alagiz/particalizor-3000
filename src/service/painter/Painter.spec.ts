@@ -1,4 +1,9 @@
-import { createNewImage, drawImageOnCanvas } from "./Painter";
+import {
+  createNewImage,
+  drawImageOnCanvas,
+  onErrorImage,
+  onLoadImage
+} from "./Painter";
 import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
 import { direction } from "../direction-calculator/DirectionCalculator";
 
@@ -66,6 +71,98 @@ describe("drawImageOnCanvas works as expected", () => {
     } = getParametersForDrawOnCanvas();
 
     drawImageOnCanvas(
+      image,
+      isImageSourceValid,
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    );
+
+    expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
+  });
+});
+
+describe("onLoadImage works as expected", () => {
+  it("doesn't crash if image source is invalid", () => {
+    const image = new Image();
+
+    const isImageSourceValid = false;
+    const {
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    } = getParametersForDrawOnCanvas();
+
+    onLoadImage(
+      image,
+      isImageSourceValid,
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    );
+
+    expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
+  });
+  it("doesn't crash if image source is valid", () => {
+    const image = new Image();
+
+    image.height = 10;
+    image.width = 10;
+
+    const isImageSourceValid = true;
+    const {
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    } = getParametersForDrawOnCanvas();
+
+    onLoadImage(
+      image,
+      isImageSourceValid,
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    );
+
+    expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
+  });
+});
+
+describe("onErrorImage works as expected", () => {
+  it("doesn't crash if image source is invalid", () => {
+    const image = new Image();
+
+    const isImageSourceValid = false;
+    const {
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    } = getParametersForDrawOnCanvas();
+
+    onErrorImage(
+      image,
+      isImageSourceValid,
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    );
+
+    expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
+  });
+  it("doesn't crash if image source is valid", () => {
+    const image = new Image();
+
+    image.height = 10;
+    image.width = 10;
+
+    const isImageSourceValid = true;
+    const {
+      referenceCanvasRefCurrent,
+      destinationCanvasRefCurrent,
+      actualValues
+    } = getParametersForDrawOnCanvas();
+
+    onErrorImage(
       image,
       isImageSourceValid,
       referenceCanvasRefCurrent,
