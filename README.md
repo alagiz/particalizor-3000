@@ -2,11 +2,11 @@
 
 react library capable of particalizing images
 
-[![Build Status](https://travis-ci.org/ArtemAlagizov/particalizor-3000.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/particalizor-3000)
-[![Coverage Status](https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg)](https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master)
-[![Codacy Badge](https://img.shields.io/codacy/grade/383b4cf594f24390b55d3429019a7940)](https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ArtemAlagizov/particalizor-3000&amp;utm_campaign=Badge_Grade)
-[![npm version](https://badge.fury.io/js/particalizor-3000.svg)](https://badge.fury.io/js/particalizor-3000)
-[![License Badge][license badge]][LICENSE]
+[![Build Status][build badge]][BUILD_URL]
+[![Coverage Status][coverage badge]][COVERAGE_URL]
+[![Codacy Quality Status][quality badge]][QUALITY_URL]
+[![npm version][npm version badge]][NPM_VERSION_URL]
+[![License Badge][license badge]][LICENSE_URL]
 
 ## live demo
 * predefined image for now
@@ -79,7 +79,15 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 ```
 ## license
 
-[MIT License](LICENSE)
+[MIT License](LICENSE_URL)
 
-[LICENSE]: https://github.com/ArtemAlagizov/particalizor-5000/blob/master/LICENSE
+[LICENSE_URL]: https://github.com/ArtemAlagizov/particalizor-5000/blob/master/LICENSE
 [license badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-3000
+[build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-3000/master
+[COVERAGE_URL]: https://coveralls.io/github/ArtemAlagizov/particalizor-3000?branch=master
+[coverage badge]: https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-3000.svg
+[QUALITY_URL]: https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000
+[quality badge]: https://img.shields.io/codacy/grade/383b4cf594f24390b55d3429019a7940
+[NPM_VERSION_URL]: https://badge.fury.io/js/particalizor-3000
+[npm version badge]: https://badge.fury.io/js/particalizor-3000.svg
