@@ -113,7 +113,7 @@ export const onLoadImage = (
     actualValues
   );
 
-const onErrorImage = (
+export const onErrorImage = (
   image: HTMLImageElement,
   isImageSourceValid: boolean,
   referenceCanvasRefCurrent: HTMLCanvasElement | null,
