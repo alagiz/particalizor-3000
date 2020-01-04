@@ -21,19 +21,12 @@ yarn add particalizor-3000
 *  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000#moving-picture): particalizes provided image
 *  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000#particle-vortex): creates particalized image with vortexes
 
-**moving picture** example
+
+## moving picture
 
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
 |![testImage](/src/assets/testImage.png)|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-image-particalized.gif)|
-
-**particle vortex** example
-
-|  particalized-3000             | 
-|:------------------------------:|
-|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-vortex.gif)|
-
-## moving picture
 
 **settings used to create the example image above**
 ```tsx
@@ -91,6 +84,10 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 ```
 
 ## particle vortex
+
+|  particalized-3000             | 
+|:------------------------------:|
+|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-vortex.gif)|
 
 **settings used to create the example image above**
 ```tsx
