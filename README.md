@@ -18,7 +18,7 @@ yarn add particalizor-3000
 * github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
 
 ## components
-*  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000#moving-picture): particalizes an image
+*  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000#moving-picture): particalizes provided image
 *  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000#particle-vortex): creates particalized image with vortexes
 
 **moving picture** example
