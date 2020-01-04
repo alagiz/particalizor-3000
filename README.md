@@ -26,7 +26,7 @@ yarn add particalizor-3000
 **settings used to create the example image above**
 ```tsx
 import React from "react";
-import MovingPicture from "particalizor-3000";
+import { MovingPicture } from "particalizor-3000";
 import testImage from "./testImage.png";
 
 export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
@@ -66,7 +66,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 ## example usage
 ```tsx
 import React from "react";
-import MovingPicture from "particalizor-3000";
+import { MovingPicture } from "particalizor-3000";
 import testImage from "./testImage.png";
 
 export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {

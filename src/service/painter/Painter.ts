@@ -1,8 +1,13 @@
 import { isNil, range } from "ramda";
-import { createParticles } from "../particle-creator/ParticleCreator";
-import { moveParticles } from "../animator/Animator";
+import {
+  createParticles,
+  IParticle
+} from "../particle-creator/ParticleCreator";
+import { moveParticles, moveVortexParticles } from "../animator/Animator";
 import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
 import errorImage from "../../assets/onErrorImage.png";
+import { IVortex } from "../vortex-creator/VortexCreator";
+import { getRandomIntNumberInRange } from "../color-calculator/ColorCalculator";
 
 let requestID: number;
 
@@ -83,6 +88,64 @@ export const drawImageOnCanvas = (
       } else {
         destination2dContext.drawImage(image, 0, 0, imageWidth, imageHeight);
       }
+    }
+  }
+};
+
+export const drawParticleVortexOnCanvas = (
+  particles: IParticle[],
+  vortexes: IVortex[],
+  actualValues: IActualParticalizorPropertyValues,
+  destinationCanvasRefCurrent: HTMLCanvasElement | null,
+  imageWidth: number,
+  imageHeight: number
+) => {
+  cancelAllRequestAnimationFrames(requestID);
+
+  if (!isNil(destinationCanvasRefCurrent)) {
+    const {
+      actualParticleNumber,
+      actualParticleLifeTime,
+      actualParticleTraceWidth
+    } = actualValues;
+
+    destinationCanvasRefCurrent.height = imageHeight;
+    destinationCanvasRefCurrent.width = imageWidth;
+
+    const destination2dContext = destinationCanvasRefCurrent.getContext("2d");
+
+    if (!isNil(destination2dContext)) {
+      destination2dContext.fillStyle = "#343a40";
+      destination2dContext.fillRect(0, 0, imageWidth, imageHeight);
+
+      destination2dContext.lineWidth = actualParticleTraceWidth;
+      destination2dContext.imageSmoothingEnabled = false;
+
+      const particles = createParticles(
+        actualParticleNumber,
+        imageWidth,
+        imageHeight,
+        actualParticleLifeTime
+      );
+
+      const hueShift = getRandomIntNumberInRange(0, 360);
+      // const hueShift = 40;
+
+      const animate = () => {
+        moveVortexParticles(
+          particles,
+          vortexes,
+          actualValues,
+          destination2dContext,
+          imageWidth,
+          imageHeight,
+          hueShift
+        );
+
+        requestID = window.requestAnimationFrame(animate);
+      };
+
+      animate();
     }
   }
 };
