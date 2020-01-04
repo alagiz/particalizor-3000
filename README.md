@@ -28,7 +28,10 @@ yarn add particalizor-3000
 | ------------------------------ |:--------------------------------------:|
 |![testImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-test-image.png)|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-image-particalized.gif)|
 
+<details><summary>moving picture api</summary>
+  
 **settings used to create the example image above**
+
 ```tsx
 import React from "react";
 import { MovingPicture } from "particalizor-3000";
@@ -82,6 +85,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
   );
 }
 ```
+</details>
 
 ## particle vortex
 
