@@ -129,7 +129,6 @@ export const drawParticleVortexOnCanvas = (
       );
 
       const hueShift = getRandomIntNumberInRange(0, 360);
-      // const hueShift = 40;
 
       const animate = () => {
         moveVortexParticles(
