@@ -8,20 +8,32 @@ react library capable of particalizing images
 [![npm version][npm version badge]][NPM_VERSION_URL]
 [![License Badge][license badge]][LICENSE_URL]
 
+## installation
+```
+yarn add particalizor-3000
+```
 ## live demo
 * predefined image for now
 * available here at the moment => http://3.13.90.180:8080/
 * github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
 
-## installation
+## components
+*  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000#moving-picture): particalizes an image
+*  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000#particle-vortex): creates particalized image with vortexes
 
-```
-yarn add particalizor-3000
-```
+**moving picture** example
 
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
 |![testImage](/src/assets/testImage.png)|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-image-particalized.gif)|
+
+**particle vortex** example
+
+|  particalized-3000             | 
+|:------------------------------:|
+|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-vortex.gif)|
+
+## moving picture
 
 **settings used to create the example image above**
 ```tsx
@@ -46,7 +58,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 
 ## api
 
-| property          |type|required|default|acceptable values|description                                                                            |
+| property          |type|required|default|acceptable values|description  |
 | ----------------- |------|---|---------|--------|--------------------------------------------------------------------------|
 | imageSource       |string|yes| --      | valid image source|  source of the image,<br>either imported image (.png, .jpg),<br>either base64 representation (i.e.  "data:image/jpeg;base64,/9j/4A..") |
 | particleNumber    |number|no | 7000    |  > 0 | number of particles                                    |
@@ -77,6 +89,60 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
   );
 }
 ```
+
+## particle vortex
+
+**settings used to create the example image above**
+```tsx
+import React from "react";
+import { ParticleVortex } from "particalizor-3000";
+
+export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
+  return (
+    <ParticleVortex
+      imageWidth={840}
+      imageHeight={384}
+      vortexNumber={7}
+      particleTraceWidth={2}
+      particleNumber={2400}
+      particleLifeTime={100}
+    />
+  );
+}
+```
+
+## api
+
+| property          |type|required|default|acceptable values|description                                                                            |
+| ----------------- |------|---|---------|--------|------------------------------------------------------|
+| vortexNumber      |number|yes| 7       |  > 0 | number of vortexes                                     |
+| imageWidth        |number|yes| 400     |  > 0 | width of the resulting image                           |
+| imageHeight       |number|yes| 400     |  > 0 | height of the resulting image                          |
+| particleNumber    |number|no | 7000    |  > 0 | number of particles                                    |
+| particleTraceWidth|number|no | 1       |  > 0|width of a particle trace, essentially [canvas lineWidth](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth)                    |
+| particleLifeTime  |number|no | 700     | > 0| lifetime of a particle                                   |
+| randomizeSettings*|boolean|no| false   | true,false | randomize properties that are not passed in      |
+
+\* not available yet
+
+**property value falls back to default if provided proprety value is not acceptable**  
+  
+## example usage
+```tsx
+import React from "react";
+import { ParticleVortex } from "particalizor-3000";
+
+export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
+  return (
+    <ParticleVortex
+      imageWidth={840}
+      imageHeight={384}
+      vortexNumber={7}
+    />
+  );
+}
+```
+
 ## license
 
 [MIT License](LICENSE_URL)

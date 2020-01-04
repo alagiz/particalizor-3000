@@ -10,7 +10,6 @@ import { isNil } from "ramda";
 export const ParticleVortex: React.FC<IParticleVortexProps> = ({
   particleNumber,
   particleLifeTime,
-  particleVelocity,
   particleTraceWidth,
   imageWidth,
   imageHeight,
@@ -21,7 +20,7 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
   const actualValues = getActualValues(
     particleNumber,
     particleLifeTime,
-    particleVelocity,
+    null,
     null,
     null,
     null,
