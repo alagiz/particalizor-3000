@@ -154,7 +154,7 @@ export const moveVortexParticles: (
           previousPosition.x - vortex.x;
         const distanceFromPreviousParticleToVortexY =
           previousPosition.y - vortex.y;
-        let distanceFromPreviousParticleToVortex = Math.hypot(
+        const distanceFromPreviousParticleToVortex = Math.hypot(
           distanceFromPreviousParticleToVortexX,
           distanceFromPreviousParticleToVortexY
         );
