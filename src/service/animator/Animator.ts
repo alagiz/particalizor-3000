@@ -7,6 +7,7 @@ import {
   hueMap
 } from "../direction-calculator/DirectionCalculator";
 import { rgbToHsl } from "../color-calculator/ColorCalculator";
+import { IVortex } from "../vortex-creator/VortexCreator";
 
 const drawOnCanvas = (
   particle: IParticle,
@@ -47,7 +48,7 @@ export const moveParticles: (
     if (!isNil(destination2dContext)) {
       let particle = particles[particleNumber];
 
-      if (particle.TTL <= 0) {
+      if (particle.lifeTime <= 0) {
         particle = createParticle(
           imageWidth,
           imageHeight,
@@ -106,9 +107,92 @@ export const moveParticles: (
       particle.x += Math.cos(directionNumber) * actualParticleVelocity;
       particle.y += Math.sin(directionNumber) * actualParticleVelocity;
 
-      --particle.TTL;
+      --particle.lifeTime;
 
       drawOnCanvas(particle, previousPosition, hueNumber, destination2dContext);
+    }
+  });
+};
+
+export const moveVortexParticles: (
+  particles: IParticle[],
+  vortexes: IVortex[],
+  actualValues: IActualParticalizorPropertyValues,
+  destination2dContext: CanvasRenderingContext2D | null,
+  imageWidth: number,
+  imageHeight: number,
+  hueShift: number
+) => void = (
+  particles,
+  vortexes,
+  actualValues,
+  destination2dContext,
+  imageWidth,
+  imageHeight,
+  hueShift
+) => {
+  const { actualParticleLifeTime } = actualValues;
+
+  range(0, particles.length).forEach((particleNumber: number) => {
+    if (!isNil(destination2dContext)) {
+      let particle = particles[particleNumber];
+
+      if (particle.lifeTime <= 0) {
+        particle = createParticle(
+          imageWidth,
+          imageHeight,
+          actualParticleLifeTime
+        );
+
+        particles[particleNumber] = particle;
+      }
+
+      const previousPosition = { x: particle.x, y: particle.y };
+
+      vortexes.forEach(vortex => {
+        const distanceFromPreviousParticleToVortexX =
+          previousPosition.x - vortex.x;
+        const distanceFromPreviousParticleToVortexY =
+          previousPosition.y - vortex.y;
+        let distanceFromPreviousParticleToVortex = Math.hypot(
+          distanceFromPreviousParticleToVortexX,
+          distanceFromPreviousParticleToVortexY
+        );
+
+        const angleSine =
+          distanceFromPreviousParticleToVortexY /
+          distanceFromPreviousParticleToVortex;
+        const angleCosine =
+          distanceFromPreviousParticleToVortexX /
+          distanceFromPreviousParticleToVortex;
+
+        const difference = distanceFromPreviousParticleToVortex - vortex.radius;
+        const angularVelocity =
+          vortex.angularVelocityMultiplyingCoefficient *
+          Math.exp(
+            (-difference * difference) /
+              vortex.angularVelocityExponentCoefficient
+          ) *
+          vortex.rotationDirection;
+        const radialVelocity = -difference * vortex.radialVelocityCoefficient;
+
+        particle.x +=
+          radialVelocity * angleCosine -
+          angularVelocity * distanceFromPreviousParticleToVortex * angleSine;
+        particle.y +=
+          radialVelocity * angleSine +
+          angularVelocity * distanceFromPreviousParticleToVortex * angleCosine;
+      });
+
+      --particle.lifeTime;
+
+      const velocity = Math.hypot(
+        previousPosition.x - particle.x,
+        previousPosition.y - particle.y
+      );
+      const hue = (Math.min(velocity * 80, 200) + hueShift) % 360;
+
+      drawOnCanvas(particle, previousPosition, hue, destination2dContext);
     }
   });
 };
