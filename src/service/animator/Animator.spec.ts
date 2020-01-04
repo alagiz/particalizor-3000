@@ -17,8 +17,8 @@ describe("moveParticle works as expected", () => {
     };
     const particles = createParticles(2, 50, 50, 50);
 
-    particles[0].TTL = -1;
-    particles[1].TTL = 1;
+    particles[0].lifeTime = -1;
+    particles[1].lifeTime = 1;
 
     const srcData: Uint8ClampedArray = new Uint8ClampedArray([17, -45.3]);
     const image = new Image();
@@ -36,12 +36,12 @@ describe("moveParticle works as expected", () => {
 
     expect(particles[0].x).not.toBe(undefined);
     expect(particles[0].y).not.toBe(undefined);
-    expect(particles[0].TTL).not.toBe(undefined);
+    expect(particles[0].lifeTime).not.toBe(undefined);
     expect(particles[0].light).not.toBe(undefined);
     expect(particles[0].saturation).not.toBe(undefined);
     expect(particles[1].x).not.toBe(undefined);
     expect(particles[1].y).not.toBe(undefined);
-    expect(particles[1].TTL).not.toBe(undefined);
+    expect(particles[1].lifeTime).not.toBe(undefined);
     expect(particles[1].light).not.toBe(undefined);
     expect(particles[1].saturation).not.toBe(undefined);
   });

@@ -15,7 +15,7 @@ describe("createParticle works as expected", () => {
 
     expect(particle.x).toBeGreaterThanOrEqual(0);
     expect(particle.x).toBeGreaterThanOrEqual(0);
-    expect(particle.TTL).toBeGreaterThanOrEqual(0);
+    expect(particle.lifeTime).toBeGreaterThanOrEqual(0);
   });
 });
 
@@ -37,6 +37,6 @@ describe("createParticles works as expected", () => {
     expect(!isNil(particles[0].y)).toBeTruthy();
     expect(!isNil(particles[0].saturation)).toBeTruthy();
     expect(!isNil(particles[0].light)).toBeTruthy();
-    expect(!isNil(particles[0].TTL)).toBeTruthy();
+    expect(!isNil(particles[0].lifeTime)).toBeTruthy();
   });
 });
