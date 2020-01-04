@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ParticleVortex when rendering should match snapshot 1`] = `
+<ParticleVortexView
+  destinationCanvasRef={
+    Object {
+      "current": null,
+    }
+  }
+/>
+`;
