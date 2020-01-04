@@ -93,6 +93,8 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 |:------------------------------:|
 |![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-vortex.gif)|
 
+<details><summary>moving picture api</summary>
+
 **settings used to create the example image above**
 ```tsx
 import React from "react";
@@ -143,6 +145,8 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
   );
 }
 ```
+
+</details>
 
 ## license
 
