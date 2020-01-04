@@ -18,7 +18,7 @@ yarn add particalizor-3000
 * github repo for the live demo app => [github repo](https://github.com/alagiz/particalizor-showcase)
 
 ## components
-*  [**moving picture**](https://github.com/alagiz/particalizor-3000#moving-picture): particalizes provided image
+*  [**moving picture**](https://github.com/alagiz/particalizor-3000/wiki/moving-picture): particalizes provided image
 *  [**particle vortex**](https://github.com/alagiz/particalizor-3000#particle-vortex): creates particalized image with vortexes
 
 
@@ -26,7 +26,7 @@ yarn add particalizor-3000
 
 |  original                      | particalized-3000                      | 
 | ------------------------------ |:--------------------------------------:|
-|![testImage](/src/assets/testImage.png)|![particalizedImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-image-particalized.gif)|
+|![testImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-test-image.png)|![particalizedImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-image-particalized.gif)|
 
 **settings used to create the example image above**
 ```tsx
