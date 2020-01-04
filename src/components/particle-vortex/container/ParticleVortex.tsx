@@ -37,8 +37,6 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
   );
   const vortexes = createVortexes(vortexNumber, imageWidth, imageHeight);
 
-  vortexes.map(vortex => console.log(vortex.x, vortex.y));
-
   useEffect(() => {
     if (!isNil(destinationCanvasRef.current)) {
       drawParticleVortexOnCanvas(
