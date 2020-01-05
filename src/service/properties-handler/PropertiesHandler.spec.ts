@@ -1,8 +1,11 @@
 import {
   defaultParticalizorValues,
+  defaultParticalizorVortexValues,
+  getActualParticleVortexValues,
   getActualValues,
   getReasonableValue,
-  particalizorSettingNames
+  particalizorSettingNames,
+  particalizorVortexSettingNames
 } from "./PropertiesHandler";
 import { direction } from "../direction-calculator/DirectionCalculator";
 
@@ -181,5 +184,133 @@ describe("getActualValues works as expected", () => {
     expect(actualParticleLifeTime).toBe(particleLifeTime);
     expect(actualParticleTraceWidth).toBe(particleTraceWidth);
     expect(actualDirectionChannel).toBe(direction.saturation);
+  });
+});
+
+describe("getActualVortexValues works as expected", () => {
+  it("returns correct actual vortex values when correct values are passed in", () => {
+    const particleNumber = 700;
+    const particleTraceWidth = 2;
+    const particleLifeTime = 7000;
+    const imageWidth = 1;
+    const imageHeight = 1;
+    const vortexNumber = 1;
+
+    const {
+      actualParticleLifeTime,
+      actualParticleNumber,
+      actualParticleTraceWidth,
+      actualVortexNumber,
+      actualImageHeight,
+      actualImageWidth
+    } = getActualParticleVortexValues(
+      particleNumber,
+      particleLifeTime,
+      particleTraceWidth,
+      imageWidth,
+      imageHeight,
+      vortexNumber
+    );
+
+    expect(actualParticleNumber).toBe(particleNumber);
+    expect(actualParticleLifeTime).toBe(particleLifeTime);
+    expect(actualParticleTraceWidth).toBe(particleTraceWidth);
+    expect(actualVortexNumber).toBe(vortexNumber);
+    expect(actualImageHeight).toBe(imageHeight);
+    expect(actualImageWidth).toBe(imageWidth);
+  });
+  it("returns correct actual vortex values when incorrect values are passed in", () => {
+    const particleNumber = -700;
+    const particleTraceWidth = -2;
+    const particleLifeTime = -7000;
+    const imageWidth = -1;
+    const imageHeight = -1;
+    const vortexNumber = -1;
+
+    const {
+      actualParticleLifeTime,
+      actualParticleNumber,
+      actualParticleTraceWidth,
+      actualVortexNumber,
+      actualImageHeight,
+      actualImageWidth
+    } = getActualParticleVortexValues(
+      particleNumber,
+      particleLifeTime,
+      particleTraceWidth,
+      imageWidth,
+      imageHeight,
+      vortexNumber
+    );
+
+    expect(actualParticleLifeTime).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.particleLifeTime
+      ]
+    );
+    expect(actualVortexNumber).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.vortexNumber
+      ]
+    );
+    expect(actualImageHeight).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.imageHeight
+      ]
+    );
+    expect(actualImageWidth).toBe(
+      defaultParticalizorVortexValues[particalizorVortexSettingNames.imageWidth]
+    );
+    expect(actualParticleTraceWidth).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.particleTraceWidth
+      ]
+    );
+    expect(actualParticleNumber).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.particleNumber
+      ]
+    );
+  });
+  it("returns correct actual vortex values when mix of correct and incorrect values are passed in", () => {
+    const particleNumber = -700;
+    const particleTraceWidth = 2;
+    const particleLifeTime = 7000;
+    const imageWidth = -1;
+    const imageHeight = -1;
+    const vortexNumber = 1;
+
+    const {
+      actualParticleLifeTime,
+      actualParticleNumber,
+      actualParticleTraceWidth,
+      actualVortexNumber,
+      actualImageHeight,
+      actualImageWidth
+    } = getActualParticleVortexValues(
+      particleNumber,
+      particleLifeTime,
+      particleTraceWidth,
+      imageWidth,
+      imageHeight,
+      vortexNumber
+    );
+
+    expect(actualParticleNumber).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.particleNumber
+      ]
+    );
+    expect(actualParticleLifeTime).toBe(particleLifeTime);
+    expect(actualParticleTraceWidth).toBe(particleTraceWidth);
+    expect(actualVortexNumber).toBe(vortexNumber);
+    expect(actualImageHeight).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.imageHeight
+      ]
+    );
+    expect(actualImageWidth).toBe(
+      defaultParticalizorVortexValues[particalizorVortexSettingNames.imageWidth]
+    );
   });
 });

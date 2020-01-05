@@ -4,7 +4,10 @@ import {
   IParticle
 } from "../particle-creator/ParticleCreator";
 import { moveParticles, moveVortexParticles } from "../animator/Animator";
-import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
+import {
+  IActualParticalizorPropertyValues,
+  IActualParticalizorVortexPropertyValues
+} from "../properties-handler/PropertiesHandler";
 import errorImage from "../../assets/onErrorImage.png";
 import { IVortex } from "../vortex-creator/VortexCreator";
 import { getRandomIntNumberInRange } from "../color-calculator/ColorCalculator";
@@ -95,7 +98,7 @@ export const drawImageOnCanvas = (
 export const drawParticleVortexOnCanvas = (
   particles: IParticle[],
   vortexes: IVortex[],
-  actualValues: IActualParticalizorPropertyValues,
+  actualValues: IActualParticalizorVortexPropertyValues,
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   imageWidth: number,
   imageHeight: number
