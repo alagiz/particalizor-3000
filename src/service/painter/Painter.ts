@@ -99,9 +99,7 @@ export const drawParticleVortexOnCanvas = (
   particles: IParticle[],
   vortexes: IVortex[],
   actualValues: IActualParticalizorVortexPropertyValues,
-  destinationCanvasRefCurrent: HTMLCanvasElement | null,
-  imageWidth: number,
-  imageHeight: number
+  destinationCanvasRefCurrent: HTMLCanvasElement | null
 ) => {
   cancelAllRequestAnimationFrames(requestID);
 
@@ -109,25 +107,27 @@ export const drawParticleVortexOnCanvas = (
     const {
       actualParticleNumber,
       actualParticleLifeTime,
-      actualParticleTraceWidth
+      actualParticleTraceWidth,
+      actualImageHeight,
+      actualImageWidth
     } = actualValues;
 
-    destinationCanvasRefCurrent.height = imageHeight;
-    destinationCanvasRefCurrent.width = imageWidth;
+    destinationCanvasRefCurrent.height = actualImageHeight;
+    destinationCanvasRefCurrent.width = actualImageWidth;
 
     const destination2dContext = destinationCanvasRefCurrent.getContext("2d");
 
     if (!isNil(destination2dContext)) {
       destination2dContext.fillStyle = "#343a40";
-      destination2dContext.fillRect(0, 0, imageWidth, imageHeight);
+      destination2dContext.fillRect(0, 0, actualImageWidth, actualImageHeight);
 
       destination2dContext.lineWidth = actualParticleTraceWidth;
       destination2dContext.imageSmoothingEnabled = false;
 
       const particles = createParticles(
         actualParticleNumber,
-        imageWidth,
-        imageHeight,
+        actualImageWidth,
+        actualImageHeight,
         actualParticleLifeTime
       );
 
@@ -139,8 +139,6 @@ export const drawParticleVortexOnCanvas = (
           vortexes,
           actualValues,
           destination2dContext,
-          imageWidth,
-          imageHeight,
           hueShift
         );
 
