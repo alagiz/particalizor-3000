@@ -195,6 +195,7 @@ describe("getActualVortexValues works as expected", () => {
     const imageWidth = 1;
     const imageHeight = 1;
     const vortexNumber = 1;
+    const backgroundColor = "green";
 
     const {
       actualParticleLifeTime,
@@ -202,14 +203,16 @@ describe("getActualVortexValues works as expected", () => {
       actualParticleTraceWidth,
       actualVortexNumber,
       actualImageHeight,
-      actualImageWidth
+      actualImageWidth,
+      actualBackgroundColor
     } = getActualParticleVortexValues(
       particleNumber,
       particleLifeTime,
       particleTraceWidth,
       imageWidth,
       imageHeight,
-      vortexNumber
+      vortexNumber,
+      backgroundColor
     );
 
     expect(actualParticleNumber).toBe(particleNumber);
@@ -218,6 +221,7 @@ describe("getActualVortexValues works as expected", () => {
     expect(actualVortexNumber).toBe(vortexNumber);
     expect(actualImageHeight).toBe(imageHeight);
     expect(actualImageWidth).toBe(imageWidth);
+    expect(actualBackgroundColor).toBe(backgroundColor);
   });
   it("returns correct actual vortex values when incorrect values are passed in", () => {
     const particleNumber = -700;
@@ -226,6 +230,7 @@ describe("getActualVortexValues works as expected", () => {
     const imageWidth = -1;
     const imageHeight = -1;
     const vortexNumber = -1;
+    const backgroundColor = "greeen";
 
     const {
       actualParticleLifeTime,
@@ -233,14 +238,16 @@ describe("getActualVortexValues works as expected", () => {
       actualParticleTraceWidth,
       actualVortexNumber,
       actualImageHeight,
-      actualImageWidth
+      actualImageWidth,
+      actualBackgroundColor
     } = getActualParticleVortexValues(
       particleNumber,
       particleLifeTime,
       particleTraceWidth,
       imageWidth,
       imageHeight,
-      vortexNumber
+      vortexNumber,
+      backgroundColor
     );
 
     expect(actualParticleLifeTime).toBe(
@@ -271,6 +278,11 @@ describe("getActualVortexValues works as expected", () => {
         particalizorVortexSettingNames.particleNumber
       ]
     );
+    expect(actualBackgroundColor).toBe(
+      defaultParticalizorVortexValues[
+        particalizorVortexSettingNames.backgroundColor
+      ]
+    );
   });
   it("returns correct actual vortex values when mix of correct and incorrect values are passed in", () => {
     const particleNumber = -700;
@@ -279,6 +291,7 @@ describe("getActualVortexValues works as expected", () => {
     const imageWidth = -1;
     const imageHeight = -1;
     const vortexNumber = 1;
+    const backgroundColor = "green";
 
     const {
       actualParticleLifeTime,
@@ -286,14 +299,16 @@ describe("getActualVortexValues works as expected", () => {
       actualParticleTraceWidth,
       actualVortexNumber,
       actualImageHeight,
-      actualImageWidth
+      actualImageWidth,
+      actualBackgroundColor
     } = getActualParticleVortexValues(
       particleNumber,
       particleLifeTime,
       particleTraceWidth,
       imageWidth,
       imageHeight,
-      vortexNumber
+      vortexNumber,
+      backgroundColor
     );
 
     expect(actualParticleNumber).toBe(
@@ -312,5 +327,6 @@ describe("getActualVortexValues works as expected", () => {
     expect(actualImageWidth).toBe(
       defaultParticalizorVortexValues[particalizorVortexSettingNames.imageWidth]
     );
+    expect(actualBackgroundColor).toBe(vortexNumber);
   });
 });
