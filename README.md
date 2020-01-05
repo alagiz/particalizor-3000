@@ -90,7 +90,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 
 |  particalized-3000             | 
 |:------------------------------:|
-|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-vortex.gif)|
+|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-another-vortex.gif)|
 
 <details><summary>particle vortex api</summary>
 
