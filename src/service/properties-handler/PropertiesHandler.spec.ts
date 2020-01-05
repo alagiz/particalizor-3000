@@ -327,6 +327,6 @@ describe("getActualVortexValues works as expected", () => {
     expect(actualImageWidth).toBe(
       defaultParticalizorVortexValues[particalizorVortexSettingNames.imageWidth]
     );
-    expect(actualBackgroundColor).toBe(vortexNumber);
+    expect(actualBackgroundColor).toBe(backgroundColor);
   });
 });

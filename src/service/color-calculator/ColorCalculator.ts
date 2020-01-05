@@ -1,4 +1,4 @@
-import { isNil } from "ramda";
+import { isEmpty, isNil } from "ramda";
 
 export const rgbToHsl = (red: number, green: number, blue: number) => {
   red /= 255;
@@ -54,5 +54,5 @@ export const isValidColor = (colorString: string) => {
 
   style.color = colorString;
 
-  return !isNil(style.color);
+  return !(isNil(style.color) || isEmpty(style.color));
 };
