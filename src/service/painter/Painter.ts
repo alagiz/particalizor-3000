@@ -109,7 +109,8 @@ export const drawParticleVortexOnCanvas = (
       actualParticleLifeTime,
       actualParticleTraceWidth,
       actualImageHeight,
-      actualImageWidth
+      actualImageWidth,
+      actualBackgroundColor
     } = actualValues;
 
     destinationCanvasRefCurrent.height = actualImageHeight;
@@ -118,7 +119,7 @@ export const drawParticleVortexOnCanvas = (
     const destination2dContext = destinationCanvasRefCurrent.getContext("2d");
 
     if (!isNil(destination2dContext)) {
-      destination2dContext.fillStyle = "#343a40";
+      destination2dContext.fillStyle = actualBackgroundColor;
       destination2dContext.fillRect(0, 0, actualImageWidth, actualImageHeight);
 
       destination2dContext.lineWidth = actualParticleTraceWidth;

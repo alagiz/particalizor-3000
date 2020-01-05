@@ -1,6 +1,7 @@
 import {
   getRandomIntNumberInRange,
   getRandomNumberInRange,
+  isValidColor,
   rgbToHsl
 } from "./ColorCalculator";
 
@@ -82,5 +83,30 @@ describe("getRandomIntNumberInRange works as expected", () => {
     const randomNumberInRange = getRandomIntNumberInRange(min, max);
 
     expect(randomNumberInRange).toBe(Math.floor(randomNumberInRange));
+  });
+});
+
+describe("isValidColor works as expected", () => {
+  it("returns true if color is valid", () => {
+    const validColorString0 = "#333333";
+    const validColorString1 = "red";
+    const validColorString2 = "#000";
+    const validColorString3 = "black";
+
+    expect(isValidColor(validColorString0)).toBeTruthy();
+    expect(isValidColor(validColorString1)).toBeTruthy();
+    expect(isValidColor(validColorString2)).toBeTruthy();
+    expect(isValidColor(validColorString3)).toBeTruthy();
+  });
+  it("returns false if color is valid", () => {
+    const validColorString0 = "#3333333";
+    const validColorString1 = "redy";
+    const validColorString2 = "#00";
+    const validColorString3 = "blackk";
+
+    expect(isValidColor(validColorString0)).toBeFalsy();
+    expect(isValidColor(validColorString1)).toBeFalsy();
+    expect(isValidColor(validColorString2)).toBeFalsy();
+    expect(isValidColor(validColorString3)).toBeFalsy();
   });
 });

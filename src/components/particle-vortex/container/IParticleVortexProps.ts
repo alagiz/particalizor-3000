@@ -5,4 +5,5 @@ export interface IParticleVortexProps {
   vortexNumber?: number | null;
   imageWidth?: number | null;
   imageHeight?: number | null;
+  backgroundColor?: string | null;
 }
