@@ -104,9 +104,9 @@ describe("isValidColor works as expected", () => {
     const validColorString2 = "#00";
     const validColorString3 = "blackk";
 
-    expect(isValidColor(validColorString0)).toBeTruthy();
-    expect(isValidColor(validColorString1)).toBeTruthy();
-    expect(isValidColor(validColorString2)).toBeTruthy();
-    expect(isValidColor(validColorString3)).toBeTruthy();
+    expect(isValidColor(validColorString0)).toBeFalsy();
+    expect(isValidColor(validColorString1)).toBeFalsy();
+    expect(isValidColor(validColorString2)).toBeFalsy();
+    expect(isValidColor(validColorString3)).toBeFalsy();
   });
 });
