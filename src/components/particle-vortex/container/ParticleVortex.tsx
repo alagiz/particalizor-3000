@@ -13,7 +13,8 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
   particleTraceWidth,
   imageWidth,
   imageHeight,
-  vortexNumber
+  vortexNumber,
+  backgroundColor
 }) => {
   const destinationCanvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -23,7 +24,8 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
     particleTraceWidth,
     imageWidth,
     imageHeight,
-    vortexNumber
+    vortexNumber,
+    backgroundColor
   );
 
   const particles = createParticles(

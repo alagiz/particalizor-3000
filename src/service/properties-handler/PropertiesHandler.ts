@@ -1,5 +1,6 @@
 import { isNil } from "ramda";
 import { direction } from "../direction-calculator/DirectionCalculator";
+import { isValidColor } from "../color-calculator/ColorCalculator";
 
 export interface IActualParticalizorPropertyValues {
   actualParticleNumber: number;
@@ -19,6 +20,7 @@ export interface IActualParticalizorVortexPropertyValues {
   actualImageWidth: number;
   actualImageHeight: number;
   actualVortexNumber: number;
+  actualBackgroundColor: string;
 }
 
 export interface IParticalizorSettingNames {
@@ -39,6 +41,7 @@ export interface IParticalizorVortexSettingNames {
   imageWidth: number;
   imageHeight: number;
   vortexNumber: number;
+  backgroundColor: string;
 }
 
 export enum particalizorSettingNames {
@@ -58,7 +61,8 @@ export enum particalizorVortexSettingNames {
   particleNumber = "particleNumber",
   imageWidth = "imageWidth",
   imageHeight = "imageHeight",
-  vortexNumber = "vortexNumber"
+  vortexNumber = "vortexNumber",
+  backgroundColor = "backgroundColor"
 }
 
 export const defaultParticalizorValues: IParticalizorSettingNames = {
@@ -78,7 +82,8 @@ export const defaultParticalizorVortexValues: IParticalizorVortexSettingNames = 
   particleNumber: 7000,
   imageHeight: 400,
   imageWidth: 400,
-  vortexNumber: 7
+  vortexNumber: 7,
+  backgroundColor: "#777"
 };
 
 export const isProvidedValueReasonable = (
@@ -116,6 +121,10 @@ export const isProvidedVortexValueReasonable = (
 ) => {
   if (isNil(providedSettingValue)) {
     return false;
+  }
+
+  if (particalizorVortexSettingNames.backgroundColor === settingName) {
+    return isValidColor(providedSettingValue);
   }
 
   return typeof providedSettingValue === "number" && providedSettingValue > 0;
@@ -207,14 +216,16 @@ export const getActualParticleVortexValues: (
   particleTraceWidth: number | null | undefined,
   imageWidth: number | null | undefined,
   imageHeight: number | null | undefined,
-  vortexNumber: number | null | undefined
+  vortexNumber: number | null | undefined,
+  backgroundColor: string | null | undefined
 ) => IActualParticalizorVortexPropertyValues = (
   particleNumber,
   particleLifeTime,
   particleTraceWidth,
   imageWidth,
   imageHeight,
-  vortexNumber
+  vortexNumber,
+  backgroundColor
 ) => {
   const actualParticleLifeTime = getReasonableVortexValue(
     particalizorVortexSettingNames.particleLifeTime,
@@ -240,6 +251,10 @@ export const getActualParticleVortexValues: (
     particalizorVortexSettingNames.vortexNumber,
     vortexNumber
   );
+  const actualBackgroundColor = getReasonableVortexValue(
+    particalizorVortexSettingNames.backgroundColor,
+    backgroundColor
+  );
 
   return {
     actualParticleLifeTime: actualParticleLifeTime,
@@ -247,6 +262,7 @@ export const getActualParticleVortexValues: (
     actualParticleTraceWidth: actualTraceWidth,
     actualImageWidth: actualImageWidth,
     actualImageHeight: actualImageHeight,
-    actualVortexNumber: actualVortexNumber
+    actualVortexNumber: actualVortexNumber,
+    actualBackgroundColor: actualBackgroundColor
   };
 };
