@@ -28,11 +28,15 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
 
   const particles = createParticles(
     actualValues.actualParticleNumber,
-    imageWidth,
-    imageHeight,
+    actualValues.actualImageWidth,
+    actualValues.actualImageHeight,
     actualValues.actualParticleLifeTime
   );
-  const vortexes = createVortexes(vortexNumber, imageWidth, imageHeight);
+  const vortexes = createVortexes(
+    actualValues.actualVortexNumber,
+    actualValues.actualImageWidth,
+    actualValues.actualImageHeight
+  );
 
   useEffect(() => {
     if (!isNil(destinationCanvasRef.current)) {
@@ -40,9 +44,7 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
         particles,
         vortexes,
         actualValues,
-        destinationCanvasRef.current,
-        imageWidth,
-        imageHeight
+        destinationCanvasRef.current
       );
     }
   });
