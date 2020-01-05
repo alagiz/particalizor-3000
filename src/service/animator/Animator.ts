@@ -122,19 +122,19 @@ export const moveVortexParticles: (
   vortexes: IVortex[],
   actualValues: IActualParticalizorVortexPropertyValues,
   destination2dContext: CanvasRenderingContext2D | null,
-  imageWidth: number,
-  imageHeight: number,
   hueShift: number
 ) => void = (
   particles,
   vortexes,
   actualValues,
   destination2dContext,
-  imageWidth,
-  imageHeight,
   hueShift
 ) => {
-  const { actualParticleLifeTime } = actualValues;
+  const {
+    actualParticleLifeTime,
+    actualImageWidth,
+    actualImageHeight
+  } = actualValues;
 
   range(0, particles.length).forEach((particleNumber: number) => {
     if (!isNil(destination2dContext)) {
@@ -142,8 +142,8 @@ export const moveVortexParticles: (
 
       if (particle.lifeTime <= 0) {
         particle = createParticle(
-          imageWidth,
-          imageHeight,
+          actualImageWidth,
+          actualImageHeight,
           actualParticleLifeTime
         );
 
