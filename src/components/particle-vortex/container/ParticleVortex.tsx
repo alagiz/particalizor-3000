@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import ParticleVortexView from "../view/ParticleVortexView";
 import { IParticleVortexProps } from "./IParticleVortexProps";
-import { getActualValues } from "../../../service/properties-handler/PropertiesHandler";
+import { getActualParticleVortexValues } from "../../../service/properties-handler/PropertiesHandler";
 import { drawParticleVortexOnCanvas } from "../../../service/painter/Painter";
 import { createVortexes } from "../../../service/vortex-creator/VortexCreator";
 import { createParticles } from "../../../service/particle-creator/ParticleCreator";
@@ -17,15 +17,13 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
 }) => {
   const destinationCanvasRef = useRef<HTMLCanvasElement>(null);
 
-  const actualValues = getActualValues(
+  const actualValues = getActualParticleVortexValues(
     particleNumber,
     particleLifeTime,
-    null,
-    null,
-    null,
-    null,
-    null,
-    particleTraceWidth
+    particleTraceWidth,
+    imageWidth,
+    imageHeight,
+    vortexNumber
   );
 
   const particles = createParticles(
