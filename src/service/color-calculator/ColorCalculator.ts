@@ -1,3 +1,5 @@
+import { isNil } from "ramda";
+
 export const rgbToHsl = (red: number, green: number, blue: number) => {
   red /= 255;
   green /= 255;
@@ -46,3 +48,11 @@ export const getRandomNumberInRange = (min: number, max: number) =>
   min + (max - min) * Math.random();
 export const getRandomIntNumberInRange = (min: number, max: number) =>
   Math.floor(getRandomNumberInRange(min, max));
+
+export const isValidColor = (colorString: string) => {
+  const style = new Option().style;
+
+  style.color = colorString;
+
+  return !isNil(style.color);
+};
