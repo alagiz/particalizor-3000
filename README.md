@@ -19,8 +19,7 @@ yarn add particalizor-3000
 
 ## components
 *  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000/wiki/moving-picture): particalizes provided image
-*  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000#particle-vortex): creates particalized image with vortexes
-
+*  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000/wiki/particle-vortex): creates particalized image with vortexes
 
 ## moving picture
 
