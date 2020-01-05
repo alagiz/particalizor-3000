@@ -1,5 +1,8 @@
 import { createParticle, IParticle } from "../particle-creator/ParticleCreator";
-import { IActualParticalizorPropertyValues } from "../properties-handler/PropertiesHandler";
+import {
+  IActualParticalizorPropertyValues,
+  IActualParticalizorVortexPropertyValues
+} from "../properties-handler/PropertiesHandler";
 import { isNil, range } from "ramda";
 import {
   direction,
@@ -117,7 +120,7 @@ export const moveParticles: (
 export const moveVortexParticles: (
   particles: IParticle[],
   vortexes: IVortex[],
-  actualValues: IActualParticalizorPropertyValues,
+  actualValues: IActualParticalizorVortexPropertyValues,
   destination2dContext: CanvasRenderingContext2D | null,
   imageWidth: number,
   imageHeight: number,
