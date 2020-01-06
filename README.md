@@ -1,6 +1,6 @@
 # particalizor-3000
 
-react library capable of particalizing images
+react library capable of particalizing images; particalize your image right away!
 
 [![build status][build badge]][BUILD_URL]
 [![coverage status][coverage badge]][COVERAGE_URL]
