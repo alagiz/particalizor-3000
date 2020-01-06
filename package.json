@@ -85,7 +85,7 @@
     "stylelint-processor-styled-components": "^1.8.0",
     "typescript": "^3.6.3"
   },
-  "description": "react library capable of particalizing images",
+  "description": "react library capable of particalizing images; particalize your image right away!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArtemAlagizov/particalizor-3000.git"
