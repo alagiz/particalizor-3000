@@ -91,9 +91,11 @@
     "url": "git+https://github.com/alagiz/particalizor-3000.git"
   },
   "keywords": [
+    "image",
     "particles",
     "particalize",
-    "particalize image"
+    "particalize image",
+    "particalizing images"
   ],
   "author": "alagiz",
   "license": "MIT",
