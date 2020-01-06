@@ -2,11 +2,12 @@
 
 react library capable of particalizing images
 
-[![Build Status][build badge]][BUILD_URL]
-[![Coverage Status][coverage badge]][COVERAGE_URL]
-[![Codacy Quality Status][quality badge]][QUALITY_URL]
+[![build status][build badge]][BUILD_URL]
+[![coverage status][coverage badge]][COVERAGE_URL]
+[![codacy quality status][quality badge]][QUALITY_URL]
 [![npm version][npm version badge]][NPM_VERSION_URL]
-[![License Badge][license badge]][LICENSE_URL]
+[![license][license badge]][LICENSE_URL]
+[![npm_downloads][npm downloads badge]][NPM_DOWNLOADS_URL]
 
 ## installation
 ```
@@ -161,4 +162,6 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
 [QUALITY_URL]: https://www.codacy.com/manual/ArtemAlagizov/particalizor-3000
 [quality badge]: https://img.shields.io/codacy/grade/383b4cf594f24390b55d3429019a7940?style=flat-square
 [NPM_VERSION_URL]: https://www.npmjs.com/package/particalizor-3000
-[npm version badge]: https://img.shields.io/npm/v/particalizor-3000?style=flat-square&color=blue
+[npm version badge]: https://img.shields.io/npm/v/particalizor-3000?style=flat-square&color=blue 
+[NPM_DOWNLOADS_URL]: https://www.npmjs.com/package/particalizor-3000
+[npm downloads badge]: https://img.shields.io/npm/dy/particalizor-3000?style=flat-square&color=blue 
