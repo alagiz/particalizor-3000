@@ -103,7 +103,7 @@ export default App;
 ```
 </details>
 
------
+---
 
 ## particle vortex
 
@@ -181,6 +181,8 @@ function App() {
 export default App; 
 ```
 </details>
+
+---
 
 ## license
 
