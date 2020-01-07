@@ -30,6 +30,9 @@ yarn add particalizor-3000
 
 <details><summary>moving picture api</summary>
   
+## description
+particalizes provided image
+  
 **settings used to create the example image above**
 
 ```tsx
@@ -107,6 +110,9 @@ export default App;
 |![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-another-vortex.gif)|
 
 <details><summary>particle vortex api</summary>
+
+## description
+creates randomized particalized image with vortexes
 
 **settings used to create the example image above**
 ```tsx
