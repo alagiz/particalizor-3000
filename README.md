@@ -116,16 +116,16 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
 
 ## api
 
-| property          |type|required|default|acceptable values|description                                 |
-| ----------------- |------|---|---------|--------|------------------------------------------------------|
-| vortexNumber      |number|no | 7       |  > 0 | number of vortexes                                     |
-| imageWidth        |number|no | 400     |  > 0 | width of the resulting image                           |
-| imageHeight       |number|no | 400     |  > 0 | height of the resulting image                          |
-| particleNumber    |number|no | 7000    |  > 0 | number of particles                                    |
-| particleTraceWidth|number|no | 1       |  > 0|width of a particle trace, essentially [canvas lineWidth](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth)                    |
-| particleLifeTime  |number|no | 700     | > 0| lifetime of a particle                                   |
-| backgroundColor   |string|no | "#777"  | valid color string| background color                          |
-| randomizeSettings*|boolean|no| false   | true,false | randomize properties that are not passed in      |
+| property          |type|required|default|acceptable values|description                                     |
+| ----------------- |------|---|---------|--------|----------------------------------------------------------|
+| vortexNumber      |number|no | 7       |  > 0 | number of vortexes                                         |
+| imageWidth        |number|no | 400     |  > 0 | width of the resulting image                               |
+| imageHeight       |number|no | 400     |  > 0 | height of the resulting image                              |
+| particleNumber    |number|no | 7000    |  > 0 | number of particles                                        |
+| particleTraceWidth|number|no | 1       |  > 0|width of a particle trace, essentially [canvas lineWidth](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth)                        |
+| particleLifeTime  |number|no | 700     | > 0| lifetime of a particle                                       |
+| backgroundColor   |string|no | "#777"  | valid color string| background color, ie "red", "#333", "#333333" |
+| randomizeSettings*|boolean|no| false   | true,false | randomize properties that are not passed in          |
 
 \* not available yet
 
