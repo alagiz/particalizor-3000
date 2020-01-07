@@ -85,6 +85,19 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
   );
 }
 ```
+or 
+```js
+import React from "react";
+import "./App.css";
+import { MovingPicture } from "particalizor-3000";
+import testImage from "./testImage.png";
+
+function App() {
+  return <MovingPicture imageSource={testImage} />;
+}
+
+export default App; 
+```
 </details>
 
 ## particle vortex
@@ -146,20 +159,6 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
   );
 }
 ```
-or 
-```js
-import React from "react";
-import "./App.css";
-import { MovingPicture } from "particalizor-3000";
-import testImage from "./testImage.png";
-
-function App() {
-  return <MovingPicture imageSource={testImage} />;
-}
-
-export default App; 
-```
-
 </details>
 
 ## license
