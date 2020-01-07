@@ -30,7 +30,7 @@ yarn add particalizor-3000
 
 <details><summary>moving picture api</summary>
   
-## description
+### description
 particalizes provided image
   
 **settings used to create the example image above**
@@ -55,7 +55,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 }
 ```
 
-## api
+### api
 
 | property          |type|required|default|acceptable values|description  |
 | ----------------- |------|---|---------|--------|--------------------------------------------------------------------------|
@@ -74,7 +74,7 @@ export const MovingPictureApp: React.FC<IMovingPictureAppProps> = ({}) => {
 
 **property value falls back to default if provided proprety value is not acceptable**  
   
-## example usage
+### example usage
 ```tsx
 import React from "react";
 import { MovingPicture } from "particalizor-3000";
@@ -103,6 +103,8 @@ export default App;
 ```
 </details>
 
+-----
+
 ## particle vortex
 
 |  particalized-3000             | 
@@ -111,7 +113,7 @@ export default App;
 
 <details><summary>particle vortex api</summary>
 
-## description
+### description
 creates randomized particalized image with vortexes
 
 **settings used to create the example image above**
@@ -133,7 +135,7 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
 }
 ```
 
-## api
+### api
 
 | property          |type|required|default|acceptable values|description                                     |
 | ----------------- |------|---|---------|--------|----------------------------------------------------------|
@@ -150,7 +152,7 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
 
 **property value falls back to default if provided proprety value is not acceptable**  
   
-## example usage
+### example usage
 ```tsx
 import React from "react";
 import { ParticleVortex } from "particalizor-3000";
