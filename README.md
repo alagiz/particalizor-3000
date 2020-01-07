@@ -20,7 +20,7 @@ yarn add particalizor-3000
 
 ## components
 *  [**moving picture**](https://github.com/ArtemAlagizov/particalizor-3000/wiki/moving-picture): particalizes provided image
-*  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000/wiki/particle-vortex): creates particalized image with vortexes
+*  [**particle vortex**](https://github.com/ArtemAlagizov/particalizor-3000/wiki/particle-vortex): creates randomized particalized image with vortexes
 
 ## moving picture
 
@@ -158,6 +158,19 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
     />
   );
 }
+```
+or 
+```js
+import React from "react";
+import "./App.css";
+import { ParticleVortex } from "particalizor-3000";
+import testImage from "./testImage.png";
+
+function App() {
+  return <ParticleVortex imageWidth={840} imageHeight={384}/>;
+}
+
+export default App; 
 ```
 </details>
 
