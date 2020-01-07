@@ -12,16 +12,6 @@ import errorImage from "../../assets/onErrorImage.png";
 import { IVortex } from "../vortex-creator/VortexCreator";
 import { getRandomIntNumberInRange } from "../color-calculator/ColorCalculator";
 
-let requestID: number;
-
-const cancelAllRequestAnimationFrames = (requestId: number) => {
-  if (!isNil(requestId)) {
-    range(0, requestId).map(stackRequestId =>
-      window.cancelAnimationFrame(stackRequestId)
-    );
-  }
-};
-
 export const drawImageOnCanvas = (
   image: HTMLImageElement,
   isImageSourceValid: boolean,
@@ -29,8 +19,6 @@ export const drawImageOnCanvas = (
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues
 ) => {
-  cancelAllRequestAnimationFrames(requestID);
-
   if (
     !isNil(referenceCanvasRefCurrent) &&
     !isNil(destinationCanvasRefCurrent)
@@ -84,7 +72,7 @@ export const drawImageOnCanvas = (
             image
           );
 
-          requestID = window.requestAnimationFrame(animate);
+          window.requestAnimationFrame(animate);
         };
 
         animate();
@@ -101,8 +89,6 @@ export const drawParticleVortexOnCanvas = (
   actualValues: IActualParticalizorVortexPropertyValues,
   destinationCanvasRefCurrent: HTMLCanvasElement | null
 ) => {
-  cancelAllRequestAnimationFrames(requestID);
-
   if (!isNil(destinationCanvasRefCurrent)) {
     const {
       actualParticleNumber,
@@ -143,7 +129,7 @@ export const drawParticleVortexOnCanvas = (
           hueShift
         );
 
-        requestID = window.requestAnimationFrame(animate);
+        window.requestAnimationFrame(animate);
       };
 
       animate();
