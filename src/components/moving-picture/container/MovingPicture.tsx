@@ -29,12 +29,26 @@ export const MovingPicture: React.FC<IMovingPictureProps> = ({
     particleTraceWidth
   );
 
+  let animationRequestIds: number[] = [];
+
+  const addAnimationRequestId = (requestId: number) =>
+    animationRequestIds.push(requestId);
+  const cancelAllRelevantRequestAnimationFrames = () => {
+    animationRequestIds.map(requestId =>
+      window.cancelAnimationFrame(requestId)
+    );
+
+    animationRequestIds = [];
+  };
+
   useEffect(() =>
     createImageElement(
       referenceCanvasRef.current,
       destinationCanvasRef.current,
       actualValues,
-      imageSource
+      imageSource,
+      addAnimationRequestId,
+      cancelAllRelevantRequestAnimationFrames
     )
   );
 
