@@ -40,13 +40,27 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
     actualValues.actualImageHeight
   );
 
+  let animationRequestIds: number[] = [];
+
+  const addAnimationRequestId = (requestId: number) =>
+    animationRequestIds.push(requestId);
+  const cancelAllRelevantRequestAnimationFrames = () => {
+    animationRequestIds.map(requestId =>
+      window.cancelAnimationFrame(requestId)
+    );
+
+    animationRequestIds = [];
+  };
+
   useEffect(() => {
     if (!isNil(destinationCanvasRef.current)) {
       drawParticleVortexOnCanvas(
         particles,
         vortexes,
         actualValues,
-        destinationCanvasRef.current
+        destinationCanvasRef.current,
+        addAnimationRequestId,
+        cancelAllRelevantRequestAnimationFrames
       );
     }
   });

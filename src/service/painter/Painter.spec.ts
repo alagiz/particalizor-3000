@@ -52,7 +52,9 @@ describe("drawImageOnCanvas works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -75,7 +77,9 @@ describe("drawImageOnCanvas works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -98,7 +102,9 @@ describe("onLoadImage works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -121,7 +127,9 @@ describe("onLoadImage works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -144,7 +152,9 @@ describe("onErrorImage works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -167,7 +177,9 @@ describe("onErrorImage works as expected", () => {
       isImageSourceValid,
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
-      actualValues
+      actualValues,
+      jest.fn(),
+      jest.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
