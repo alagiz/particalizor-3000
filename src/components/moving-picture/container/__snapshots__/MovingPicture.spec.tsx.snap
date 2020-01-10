@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a MovingPicture when rendering should match snapshot 1`] = `
+<MovingPictureView
+  destinationCanvasRef={
+    Object {
+      "current": null,
+    }
+  }
+  key="777"
+  referenceCanvasRef={
+    Object {
+      "current": null,
+    }
+  }
+/>
+`;
