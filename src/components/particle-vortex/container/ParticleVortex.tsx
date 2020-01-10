@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import ParticleVortexView from "../view/ParticleVortexView";
 import { IParticleVortexProps } from "./IParticleVortexProps";
-import { getActualParticleVortexValues } from "../../../service/properties-handler/PropertiesHandler";
+import { getActualParticleVortexValues } from "../../../services/properties-handler/PropertiesHandler";
 import {
   clearCanvas,
   drawParticleVortexOnCanvas
-} from "../../../service/painter/Painter";
-import { createVortexes } from "../../../service/vortex-creator/VortexCreator";
-import { createParticles } from "../../../service/particle-creator/ParticleCreator";
+} from "../../../services/painter/Painter";
+import { createVortexes } from "../../../services/vortex-creator/VortexCreator";
+import { createParticles } from "../../../services/particle-creator/ParticleCreator";
 import { isNil } from "ramda";
 
 export const ParticleVortex: React.FC<IParticleVortexProps> = ({
@@ -71,7 +71,12 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
     };
   }, [destinationCanvasRef]);
 
-  return <ParticleVortexView destinationCanvasRef={destinationCanvasRef} />;
+  return (
+    <ParticleVortexView
+      key={Math.random()}
+      destinationCanvasRef={destinationCanvasRef}
+    />
+  );
 };
 
 export default ParticleVortex;

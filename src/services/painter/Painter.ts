@@ -253,10 +253,10 @@ export const createImageElement: (
 
 export const clearCanvas = (canvasRef: RefObject<HTMLCanvasElement>) => {
   if (!isNil(canvasRef) && !isNil(canvasRef.current)) {
-    const twoDContext = canvasRef.current.getContext("2d");
+    const context = canvasRef.current.getContext("2d");
 
-    if (!isNil(twoDContext)) {
-      twoDContext.clearRect(
+    if (!isNil(context)) {
+      context.clearRect(
         0,
         0,
         canvasRef.current.width,
