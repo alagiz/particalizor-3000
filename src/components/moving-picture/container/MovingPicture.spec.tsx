@@ -6,6 +6,8 @@ import MovingPictureView from "../view/MovingPictureView";
 describe("Given a MovingPicture", () => {
   describe("when rendering", () => {
     it("should match snapshot", () => {
+      Math.random = jest.fn(() => 777);
+
       const component = shallow(<MovingPicture imageSource={""} />);
 
       expect(component).toMatchSnapshot();
