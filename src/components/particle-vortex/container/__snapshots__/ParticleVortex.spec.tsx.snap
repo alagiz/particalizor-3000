@@ -7,5 +7,6 @@ exports[`Given a ParticleVortex when rendering should match snapshot 1`] = `
       "current": null,
     }
   }
+  key="0.6315135352108447"
 />
 `;

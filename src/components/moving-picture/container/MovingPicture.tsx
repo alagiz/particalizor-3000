@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import MovingPictureView from "../view/MovingPictureView";
 import { IMovingPictureProps } from "./IMovingPictureProps";
-import { getActualValues } from "../../../service/properties-handler/PropertiesHandler";
+import { getActualValues } from "../../../services/properties-handler/PropertiesHandler";
 import {
   clearCanvas,
   createImageElement
-} from "../../../service/painter/Painter";
+} from "../../../services/painter/Painter";
 
 export const MovingPicture: React.FC<IMovingPictureProps> = ({
   particleNumber,
@@ -35,9 +35,8 @@ export const MovingPicture: React.FC<IMovingPictureProps> = ({
   let animationRequestId: number | null = 0;
 
   const getAnimationRequestId = () => animationRequestId;
-  const setAnimationRequestId = (requestId: number | null) => {
-    animationRequestId = requestId;
-  };
+  const setAnimationRequestId = (requestId: number | null) =>
+    (animationRequestId = requestId);
 
   useEffect(() =>
     createImageElement(
@@ -60,6 +59,7 @@ export const MovingPicture: React.FC<IMovingPictureProps> = ({
 
   return (
     <MovingPictureView
+      key={Math.random()}
       destinationCanvasRef={destinationCanvasRef}
       referenceCanvasRef={referenceCanvasRef}
     />
