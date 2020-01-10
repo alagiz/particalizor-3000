@@ -6,8 +6,15 @@ import ParticleVortexView from "../view/ParticleVortexView";
 describe("Given a ParticleVortex", () => {
   describe("when rendering", () => {
     it("should match snapshot", () => {
+      Math.random = jest.fn(() => 777);
+
       const component = shallow(
-        <ParticleVortex imageWidth={100} imageHeight={100} vortexNumber={1} />
+        <ParticleVortex
+          imageWidth={100}
+          imageHeight={100}
+          vortexNumber={1}
+          key={1}
+        />
       );
 
       expect(component).toMatchSnapshot();
