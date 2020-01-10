@@ -18,8 +18,8 @@ export const MovingPicture: React.FC<IMovingPictureProps> = ({
   particleTraceWidth,
   imageSource
 }) => {
-  let destinationCanvasRef = useRef<HTMLCanvasElement>(null);
-  let referenceCanvasRef = useRef<HTMLCanvasElement>(null);
+  const destinationCanvasRef = useRef<HTMLCanvasElement>(null);
+  const referenceCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const actualValues = getActualValues(
     particleNumber,
