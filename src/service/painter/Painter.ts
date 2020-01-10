@@ -11,6 +11,7 @@ import {
 import errorImage from "../../assets/onErrorImage.png";
 import { IVortex } from "../vortex-creator/VortexCreator";
 import { getRandomIntNumberInRange } from "../color-calculator/ColorCalculator";
+import { RefObject } from "react";
 
 export const drawImageOnCanvas = (
   image: HTMLImageElement,
@@ -18,11 +19,9 @@ export const drawImageOnCanvas = (
   referenceCanvasRefCurrent: HTMLCanvasElement | null,
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues,
-  addAnimationRequestId: (requestId: number) => void,
-  cancelAllRelevantRequestAnimationFrames: () => void
+  setAnimationRequestId: (requestId: number | null) => void,
+  getAnimationRequestId: () => number | null
 ) => {
-  cancelAllRelevantRequestAnimationFrames();
-
   if (
     !isNil(referenceCanvasRefCurrent) &&
     !isNil(destinationCanvasRefCurrent)
@@ -76,7 +75,9 @@ export const drawImageOnCanvas = (
             image
           );
 
-          addAnimationRequestId(window.requestAnimationFrame(animate));
+          if (!isNil(getAnimationRequestId())) {
+            setAnimationRequestId(window.requestAnimationFrame(animate));
+          }
         };
 
         animate();
@@ -92,11 +93,9 @@ export const drawParticleVortexOnCanvas = (
   vortexes: IVortex[],
   actualValues: IActualParticalizorVortexPropertyValues,
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
-  addAnimationRequestId: (requestId: number) => void,
-  cancelAllRelevantRequestAnimationFrames: () => void
+  setAnimationRequestId: (requestId: number | null) => void,
+  getAnimationRequestId: () => number | null
 ) => {
-  cancelAllRelevantRequestAnimationFrames();
-
   if (!isNil(destinationCanvasRefCurrent)) {
     const {
       actualParticleNumber,
@@ -137,7 +136,9 @@ export const drawParticleVortexOnCanvas = (
           hueShift
         );
 
-        addAnimationRequestId(window.requestAnimationFrame(animate));
+        if (!isNil(getAnimationRequestId())) {
+          setAnimationRequestId(window.requestAnimationFrame(animate));
+        }
       };
 
       animate();
@@ -162,8 +163,8 @@ export const onLoadImage = (
   referenceCanvasRefCurrent: HTMLCanvasElement | null,
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues,
-  addAnimationRequestId: (requestId: number) => void,
-  cancelAllRelevantRequestAnimationFrames: () => void
+  setAnimationRequestId: (requestId: number | null) => void,
+  getAnimationRequestId: () => number | null
 ) =>
   drawImageOnCanvas(
     image,
@@ -171,8 +172,8 @@ export const onLoadImage = (
     referenceCanvasRefCurrent,
     destinationCanvasRefCurrent,
     actualValues,
-    addAnimationRequestId,
-    cancelAllRelevantRequestAnimationFrames
+    setAnimationRequestId,
+    getAnimationRequestId
   );
 
 export const onErrorImage = (
@@ -181,8 +182,8 @@ export const onErrorImage = (
   referenceCanvasRefCurrent: HTMLCanvasElement | null,
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues,
-  addAnimationRequestId: (requestId: number) => void,
-  cancelAllRelevantRequestAnimationFrames: () => void
+  setAnimationRequestId: (requestId: number | null) => void,
+  getAnimationRequestId: () => number | null
 ) => {
   image = createNewImage(() =>
     onLoadImage(
@@ -191,8 +192,8 @@ export const onErrorImage = (
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      addAnimationRequestId,
-      cancelAllRelevantRequestAnimationFrames
+      setAnimationRequestId,
+      getAnimationRequestId
     )
   );
 
@@ -204,8 +205,8 @@ export const onErrorImage = (
     referenceCanvasRefCurrent,
     destinationCanvasRefCurrent,
     actualValues,
-    addAnimationRequestId,
-    cancelAllRelevantRequestAnimationFrames
+    setAnimationRequestId,
+    getAnimationRequestId
   );
 };
 
@@ -214,15 +215,15 @@ export const createImageElement: (
   destinationCanvasRefCurrent: HTMLCanvasElement | null,
   actualValues: IActualParticalizorPropertyValues,
   imageSource: string,
-  addAnimationRequestId: (requestId: number) => void,
-  cancelAllRelevantRequestAnimationFrames: () => void
+  setAnimationRequestId: (requestId: number | null) => void,
+  getAnimationRequestId: () => number | null
 ) => void = (
   referenceCanvasRefCurrent,
   destinationCanvasRefCurrent,
   actualValues,
   imageSource,
-  addAnimationRequestId,
-  cancelAllRelevantRequestAnimationFrames
+  setAnimationRequestId,
+  getAnimationRequestId
 ) => {
   const image = createNewImage(() =>
     onLoadImage(
@@ -231,8 +232,8 @@ export const createImageElement: (
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      addAnimationRequestId,
-      cancelAllRelevantRequestAnimationFrames
+      setAnimationRequestId,
+      getAnimationRequestId
     )
   );
 
@@ -243,9 +244,24 @@ export const createImageElement: (
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      addAnimationRequestId,
-      cancelAllRelevantRequestAnimationFrames
+      setAnimationRequestId,
+      getAnimationRequestId
     );
 
   image.src = imageSource;
+};
+
+export const clearCanvas = (canvasRef: RefObject<HTMLCanvasElement>) => {
+  if (!isNil(canvasRef) && !isNil(canvasRef.current)) {
+    const twoDContext = canvasRef.current.getContext("2d");
+
+    if (!isNil(twoDContext)) {
+      twoDContext.clearRect(
+        0,
+        0,
+        canvasRef.current.width,
+        canvasRef.current.height
+      );
+    }
+  }
 };

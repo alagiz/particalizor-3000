@@ -2,7 +2,10 @@ import React, { useEffect, useRef } from "react";
 import ParticleVortexView from "../view/ParticleVortexView";
 import { IParticleVortexProps } from "./IParticleVortexProps";
 import { getActualParticleVortexValues } from "../../../service/properties-handler/PropertiesHandler";
-import { drawParticleVortexOnCanvas } from "../../../service/painter/Painter";
+import {
+  clearCanvas,
+  drawParticleVortexOnCanvas
+} from "../../../service/painter/Painter";
 import { createVortexes } from "../../../service/vortex-creator/VortexCreator";
 import { createParticles } from "../../../service/particle-creator/ParticleCreator";
 import { isNil } from "ramda";
@@ -40,16 +43,11 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
     actualValues.actualImageHeight
   );
 
-  let animationRequestIds: number[] = [];
+  let animationRequestId: number | null = 0;
 
-  const addAnimationRequestId = (requestId: number) =>
-    animationRequestIds.push(requestId);
-  const cancelAllRelevantRequestAnimationFrames = () => {
-    animationRequestIds.map(requestId =>
-      window.cancelAnimationFrame(requestId)
-    );
-
-    animationRequestIds = [];
+  const getAnimationRequestId = () => animationRequestId;
+  const setAnimationRequestId = (requestId: number | null) => {
+    animationRequestId = requestId;
   };
 
   useEffect(() => {
@@ -59,11 +57,19 @@ export const ParticleVortex: React.FC<IParticleVortexProps> = ({
         vortexes,
         actualValues,
         destinationCanvasRef.current,
-        addAnimationRequestId,
-        cancelAllRelevantRequestAnimationFrames
+        setAnimationRequestId,
+        getAnimationRequestId
       );
     }
   });
+
+  useEffect(() => {
+    return () => {
+      setAnimationRequestId(null);
+
+      clearCanvas(destinationCanvasRef);
+    };
+  }, [destinationCanvasRef]);
 
   return <ParticleVortexView destinationCanvasRef={destinationCanvasRef} />;
 };
