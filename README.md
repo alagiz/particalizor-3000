@@ -24,7 +24,7 @@ yarn add particalizor-3000
 ## moving picture
 
 |  original                      | particalized-3000                      | 
-| ------------------------------ |:--------------------------------------:|
+|:------------------------------:|:--------------------------------------:|
 |![testImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-test-image.png)|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-image-particalized.gif)|
 
 <details><summary>moving picture api</summary>
