@@ -116,7 +116,7 @@ export default App;
 ### description
 creates randomized particalized image with vortexes
 
-**settings used to create the example image above**
+**settings used to create first example image above**
 ```tsx
 import React from "react";
 import { ParticleVortex } from "particalizor-3000";
@@ -130,6 +130,24 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
       particleTraceWidth={2}
       particleNumber={2400}
       particleLifeTime={100}
+    />
+  );
+}
+```
+**settings used to create second example image above**
+```tsx
+import React from "react";
+import { ParticleVortex } from "particalizor-3000";
+
+export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
+  return (
+    <ParticleVortex
+      imageWidth={840}
+      imageHeight={384}
+      vortexNumber={3}
+      particleTraceWidth={600}
+      particleNumber={30}
+      particleLifeTime={1100}
     />
   );
 }
