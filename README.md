@@ -109,6 +109,7 @@ export default App;
 |  particalized-3000             | 
 |:------------------------------:|
 |![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-another-vortex.gif)|
+|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-art-vortex.gif)|
 
 <details><summary>particle vortex api</summary>
 
