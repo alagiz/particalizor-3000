@@ -108,8 +108,8 @@ export default App;
 
 |  particalized-3000             | 
 |:------------------------------:|
-|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-another-vortex.gif)|
 |![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-art-vortex.gif)|
+|![particalizedImage](https://raw.githubusercontent.com/ArtemAlagizov/images-for-repos/master/particalizor-another-vortex.gif)|
 
 <details><summary>particle vortex api</summary>
 
@@ -126,10 +126,10 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
     <ParticleVortex
       imageWidth={840}
       imageHeight={384}
-      vortexNumber={7}
-      particleTraceWidth={2}
-      particleNumber={2400}
-      particleLifeTime={100}
+      vortexNumber={3}
+      particleTraceWidth={600}
+      particleNumber={30}
+      particleLifeTime={1100}
     />
   );
 }
@@ -144,10 +144,10 @@ export const ParticleVortexApp: React.FC<IParticleVortexAppProps> = ({}) => {
     <ParticleVortex
       imageWidth={840}
       imageHeight={384}
-      vortexNumber={3}
-      particleTraceWidth={600}
-      particleNumber={30}
-      particleLifeTime={1100}
+      vortexNumber={7}
+      particleTraceWidth={2}
+      particleNumber={2400}
+      particleLifeTime={100}
     />
   );
 }
