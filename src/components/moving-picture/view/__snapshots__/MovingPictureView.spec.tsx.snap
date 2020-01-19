@@ -4,7 +4,7 @@ exports[`Given MovingPictureView when rendering should have MovingPictureView ma
 <Fragment>
   <styled.div>
     <canvas
-      className="dest-canvas"
+      className="particalizor-3000-destination-canvas"
     />
   </styled.div>
   <styled.div>

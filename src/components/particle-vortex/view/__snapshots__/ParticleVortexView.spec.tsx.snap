@@ -2,6 +2,8 @@
 
 exports[`Given ParticleVortexView when rendering should have ParticleVortexView matching snapshot 1`] = `
 <styled.div>
-  <canvas />
+  <canvas
+    className="particalizor-3000-destination-canvas"
+  />
 </styled.div>
 `;
