@@ -7,7 +7,10 @@ const ParticleVortexView: React.FC<IParticleVortexViewProps> = ({
 }) => {
   return (
     <Styled.DestinationCanvas>
-      <canvas ref={destinationCanvasRef} />
+      <canvas
+        ref={destinationCanvasRef}
+        className="particalizor-3000-destination-canvas"
+      />
     </Styled.DestinationCanvas>
   );
 };
