@@ -9,7 +9,10 @@ const MovingPictureView: React.FC<IMovingPictureViewProps> = ({
   return (
     <>
       <Styled.DestinationCanvas>
-        <canvas ref={destinationCanvasRef} className="dest-canvas" />
+        <canvas
+          ref={destinationCanvasRef}
+          className="particalizor-3000-destination-canvas"
+        />
       </Styled.DestinationCanvas>
       <Styled.RefCanvas>
         <canvas id="referenceCanvas" ref={referenceCanvasRef} />
