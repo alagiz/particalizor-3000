@@ -15,7 +15,7 @@ yarn add particalizor-3000
 ```
 ## live demo
 * available here => http://removed/particalizor-3000-showcase
-* [relaxator](https://github.com/alagiz/relaxator) is based on **particalizor-3000** and available here => [http://www.removed/relaxator](http://www.removed/relaxator)
+* [relaxator](https://github.com/alagiz/relaxator) is based on **particalizor-3000** and available here => [http://removed/relaxator](http://www.removed/relaxator)
 * github repo for the live demo app => [particalizor-showcase](https://github.com/alagiz/particalizor-showcase)
 
 ## components
