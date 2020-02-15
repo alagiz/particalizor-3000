@@ -14,7 +14,7 @@ react library capable of particalizing images; particalize your image right away
 yarn add particalizor-3000
 ```
 ## live demo
-* available here at the moment => http://3.13.90.180:8080/
+* available here => http://artem-alagizov.com/particalizor-3000-showcase
 * github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
 
 ## components
