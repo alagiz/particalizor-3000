@@ -38,5 +38,10 @@
     "@typescript-eslint/trailing-comma": "off",
     "react/prop-types": "off",
     "prettier/prettier": ["error", {"semi": true}]
+  },
+  "settings": {
+    "react": {
+      "version": "6.8"
+    }
   }
 }
