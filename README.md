@@ -207,7 +207,7 @@ export default App;
 
 [MIT License](LICENSE_URL)
 
-[LICENSE_URL]: https://github.com/ArtemAlagizov/particalizor-5000/blob/master/LICENSE
+[LICENSE_URL]: https://github.com/ArtemAlagizov/particalizor-3000/blob/master/LICENSE
 [license badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=blue
 [BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-3000
 [build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-3000/master?style=flat-square
