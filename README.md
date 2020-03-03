@@ -7,7 +7,7 @@ react library capable of particalizing images; particalize your image right away
 [![codacy quality status][quality badge]][QUALITY_URL]
 [![npm version][npm version badge]][NPM_VERSION_URL]
 [![license][license badge]][LICENSE_URL]
-[![npm_downloads][npm downloads badge]][NPM_DOWNLOADS_URL]
+[![npm downloads][npm downloads badge]][NPM_DOWNLOADS_URL]
 
 ## installation
 ```
