@@ -14,8 +14,8 @@ react library capable of particalizing images; particalize your image right away
 yarn add particalizor-3000
 ```
 ## live demo
-* available here => http://artem-alagizov.com/particalizor-3000-showcase
-* [relaxator](https://github.com/ArtemAlagizov/relaxator) is based on **particalizor-3000** and available here => [http://artem-alagizov.com/relaxator](http://www.artem-alagizov.com/relaxator)
+* available here => https://artem-alagizov.com/particalizor-3000-showcase
+* [relaxator](https://github.com/ArtemAlagizov/relaxator) is based on **particalizor-3000** and available here => [https://artem-alagizov.com/relaxator](http://www.artem-alagizov.com/relaxator)
 * github repo for the live demo app => [particalizor-showcase](https://github.com/ArtemAlagizov/particalizor-showcase)
 
 ## components
