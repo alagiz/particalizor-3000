@@ -104,5 +104,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://www.npmjs.com/package/particalizor-3000"
+  }
 }
