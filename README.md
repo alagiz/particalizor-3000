@@ -14,7 +14,7 @@ yarn add particalizor-3000
 ```
 ## live demo
 * predefined image for now
-* available here at the moment => http://3.13.90.180:8080/
+* available here at the moment => https://artem-alagizov.com/particalizor-3000-showcase
 * github repo for the live demo app => [github repo](https://github.com/ArtemAlagizov/particalizor-showcase)
 
 ## components
