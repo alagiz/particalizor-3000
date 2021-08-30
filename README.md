@@ -213,7 +213,7 @@ export default App;
 [build badge]: https://img.shields.io/travis/alagiz/particalizor-3000/master?style=flat-square
 [COVERAGE_URL]: https://coveralls.io/github/alagiz/particalizor-3000?branch=master
 [coverage badge]: https://img.shields.io/coveralls/github/alagiz/particalizor-3000.svg?style=flat-square&color=brightgreen
-[QUALITY_URL]: https://www.codacy.com/manual/alagiz/particalizor-3000
+[QUALITY_URL]: https://www.codacy.com/gh/alagiz/particalizor-3000
 [quality badge]: https://img.shields.io/codacy/grade/383b4cf594f24390b55d3429019a7940?style=flat-square
 [NPM_VERSION_URL]: https://www.npmjs.com/package/particalizor-3000
 [npm version badge]: https://img.shields.io/npm/v/particalizor-3000?style=flat-square&color=blue 
