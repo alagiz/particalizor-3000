@@ -1,5 +1,7 @@
 # particalizor-3000
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/220094c0cb08413ab8581c118217c28f)](https://app.codacy.com/gh/ArtemAlagizov/particalizor-3000?utm_source=github.com&utm_medium=referral&utm_content=ArtemAlagizov/particalizor-3000&utm_campaign=Badge_Grade_Settings)
+
 react library capable of particalizing images; particalize your image right away!
 
 [![build status][build badge]][BUILD_URL]
