@@ -1,21 +1,13 @@
-import React from "react";
-import { mount, shallow } from "enzyme";
+import { render } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
 import MovingPicture from "./MovingPicture";
-import MovingPictureView from "../view/MovingPictureView";
 
-describe("Given a MovingPicture", () => {
-  describe("when rendering", () => {
-    it("should match snapshot", () => {
-      Math.random = jest.fn(() => 777);
+describe("MovingPicture", () => {
+  it("renders without crashing and mounts the destination canvas", () => {
+    const { container } = render(<MovingPicture imageSource="" />);
 
-      const component = shallow(<MovingPicture imageSource={""} />);
-
-      expect(component).toMatchSnapshot();
-    });
-    it("should render MovingPictureView", () => {
-      const component = mount(<MovingPicture imageSource={""} />);
-
-      expect(component.find(MovingPictureView).length).toBe(1);
-    });
+    expect(
+      container.querySelector(".particalizor-3000-destination-canvas"),
+    ).toBeInTheDocument();
   });
 });

@@ -1,3 +1,4 @@
+import { describe, it, expect, vi } from "vitest";
 import {
   createNewImage,
   drawImageOnCanvas,
@@ -30,7 +31,7 @@ const getParametersForDrawOnCanvas = () => {
 
 describe("createNewImage works as expected", () => {
   it("creates new image", () => {
-    const image = createNewImage(jest.fn());
+    const image = createNewImage(vi.fn());
 
     expect(image).toBeDefined();
   });
@@ -53,8 +54,8 @@ describe("drawImageOnCanvas works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -78,8 +79,8 @@ describe("drawImageOnCanvas works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -103,8 +104,8 @@ describe("onLoadImage works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -128,8 +129,8 @@ describe("onLoadImage works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -153,8 +154,8 @@ describe("onErrorImage works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();
@@ -178,8 +179,8 @@ describe("onErrorImage works as expected", () => {
       referenceCanvasRefCurrent,
       destinationCanvasRefCurrent,
       actualValues,
-      jest.fn(),
-      jest.fn()
+      vi.fn(),
+      vi.fn()
     );
 
     expect(destinationCanvasRefCurrent.getContext("2d")).toBeDefined();

@@ -1,31 +1,22 @@
 {
   "compilerOptions": {
+    "target": "es2020",
     "module": "commonjs",
-    "target": "es6",
-    "outDir": "./lib",
-    "isolatedModules": true,
-    "allowJs": true,
-    "skipLibCheck": true,
-    "jsx": "react",
-    "esModuleInterop": true,
-    "declaration": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+    "declaration": true,
+    "outDir": "./lib",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "src/setupTests*",
-    "src/**/*.spec.*"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "lib", "src/setupTests*", "src/**/*.spec.*"]
 }

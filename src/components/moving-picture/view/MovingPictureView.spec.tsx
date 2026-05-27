@@ -1,18 +1,20 @@
-import React from "react";
-import { shallow } from "enzyme";
+import { createRef } from "react";
+import { render } from "@testing-library/react";
+import { describe, it, expect } from "vitest";
 import MovingPictureView from "./MovingPictureView";
 
-describe("Given MovingPictureView", () => {
-  describe("when rendering", () => {
-    it("should have MovingPictureView matching snapshot", () => {
-      const component = shallow(
-        <MovingPictureView
-          referenceCanvasRef={null}
-          destinationCanvasRef={null}
-        />
-      );
+describe("MovingPictureView", () => {
+  it("renders destination and reference canvases", () => {
+    const { container } = render(
+      <MovingPictureView
+        referenceCanvasRef={createRef<HTMLCanvasElement>()}
+        destinationCanvasRef={createRef<HTMLCanvasElement>()}
+      />,
+    );
 
-      expect(component).toMatchSnapshot();
-    });
+    expect(
+      container.querySelector(".particalizor-3000-destination-canvas"),
+    ).toBeInTheDocument();
+    expect(container.querySelector("#referenceCanvas")).toBeInTheDocument();
   });
 });
