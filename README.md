@@ -2,9 +2,6 @@
 
 react library capable of particalizing images; particalize your image right away!
 
-[![build status][build badge]][BUILD_URL]
-[![coverage status][coverage badge]][COVERAGE_URL]
-[![codacy quality status][quality badge]][QUALITY_URL]
 [![npm version][npm version badge]][NPM_VERSION_URL]
 [![license][license badge]][LICENSE_URL]
 [![npm downloads][npm downloads badge]][NPM_DOWNLOADS_URL]
@@ -13,10 +10,6 @@ react library capable of particalizing images; particalize your image right away
 ```
 yarn add particalizor-3000
 ```
-## live demo
-* available here => http://removed/particalizor-3000-showcase
-* [relaxator](https://github.com/alagiz/relaxator) is based on **particalizor-3000** and available here => [http://removed/relaxator](http://www.removed/relaxator)
-* github repo for the live demo app => [particalizor-showcase](https://github.com/alagiz/particalizor-showcase)
 
 ## components
 *  [**moving picture**](https://github.com/alagiz/particalizor-3000/wiki/moving-picture): particalizes provided image
@@ -26,7 +19,7 @@ yarn add particalizor-3000
 
 |  original                      | particalized-3000                      | 
 |:------------------------------:|:--------------------------------------:|
-|![testImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-test-image.png)|![particalizedImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-image-particalized.gif)|
+|![testImage](docs/images/particalizor-test-image.png)|![particalizedImage](docs/images/particalizor-image-particalized.gif)|
 
 <details><summary>moving picture api</summary>
   
@@ -109,8 +102,8 @@ export default App;
 
 |  particalized-3000             | 
 |:------------------------------:|
-|![particalizedImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-art-vortex.gif)|
-|![particalizedImage](https://raw.githubusercontent.com/alagiz/images-for-repos/master/particalizor-another-vortex.gif)|
+|![particalizedImage](docs/images/particalizor-art-vortex.gif)|
+|![particalizedImage](docs/images/particalizor-another-vortex.gif)|
 
 <details><summary>particle vortex api</summary>
 
@@ -209,13 +202,7 @@ export default App;
 
 [LICENSE_URL]: https://github.com/alagiz/particalizor-3000/blob/master/LICENSE
 [license badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square&color=blue
-[BUILD_URL]: https://travis-ci.org/alagiz/particalizor-3000
-[build badge]: https://img.shields.io/travis/alagiz/particalizor-3000/master?style=flat-square
-[COVERAGE_URL]: https://coveralls.io/github/alagiz/particalizor-3000?branch=master
-[coverage badge]: https://img.shields.io/coveralls/github/alagiz/particalizor-3000.svg?style=flat-square&color=brightgreen
-[QUALITY_URL]: https://www.codacy.com/gh/alagiz/particalizor-3000
-[quality badge]: https://img.shields.io/codacy/grade/2d206da3e6d74d09b0d0de19932b6d98?style=flat-square
 [NPM_VERSION_URL]: https://www.npmjs.com/package/particalizor-3000
-[npm version badge]: https://img.shields.io/npm/v/particalizor-3000?style=flat-square&color=blue 
+[npm version badge]: https://img.shields.io/npm/v/particalizor-3000?style=flat-square&color=blue
 [NPM_DOWNLOADS_URL]: https://www.npmjs.com/package/particalizor-3000
-[npm downloads badge]: https://img.shields.io/npm/dy/particalizor-3000?style=flat-square&color=blue 
+[npm downloads badge]: https://img.shields.io/npm/dy/particalizor-3000?style=flat-square&color=blue
